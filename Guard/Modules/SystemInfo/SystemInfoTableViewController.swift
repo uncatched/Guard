@@ -33,6 +33,33 @@ final class SystemInfoTableViewController: UITableViewController {
     }
 }
 
+// MARK: - UITableViewDelegate
+extension SystemInfoTableViewController {
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let section = SystemInfoSection(rawValue: indexPath.section)!
+        switch section {
+        case .general:
+            let row = SystemInfoGeneralRow(rawValue: indexPath.row)!
+            copyGeneralRow(row)
+        case .screen:
+            let row = SystemInfoScreenRow(rawValue: indexPath.row)!
+            copyScreenRow(row)
+        case .system:
+            let row = SystemInfoSystemRow(rawValue: indexPath.row)!
+            copySystemRow(row)
+        case .capacity:
+            let row = SystemInfoCapacityRow(rawValue: indexPath.row)!
+            copyCapacityRow(row)
+        case .network:
+            let row = SystemInfoNetworkRow(rawValue: indexPath.row)!
+            copyNetworkRow(row)
+        }
+    }
+}
+
 // MARK: - Private methods
 extension SystemInfoTableViewController {
     
@@ -68,5 +95,61 @@ extension SystemInfoTableViewController {
         // Network
         wifiLabel.text = UIDevice.current.getWiFiAddress(for: .wifi) ?? "No connection"
         cellularLabel.text = UIDevice.current.getWiFiAddress(for: .cellular) ?? "No connection"
+    }
+    
+    private func copyGeneralRow(_ row: SystemInfoGeneralRow) {
+        switch row {
+        case .uuid:
+            copy(text: uuidLabel.text!)
+        case .identifier:
+            copy(text: identifierLabel.text!)
+        case .description:
+            copy(text: descriptionLabel.text!)
+        }
+    }
+    
+    private func copyScreenRow(_ row: SystemInfoScreenRow) {
+        switch row {
+        case .diagonal:
+            copy(text: diagonalLabel.text!)
+        case .ppi:
+            copy(text: ppiLabel.text!)
+        case .ratio:
+            copy(text: ratioLabel.text!)
+        }
+    }
+    
+    private func copySystemRow(_ row: SystemInfoSystemRow) {
+        switch row {
+        case .sensor:
+            copy(text: sensorLabel.text!)
+        case .version:
+            copy(text: versionLabel.text!)
+        case .name:
+            copy(text: nameLabel.text!)
+        }
+    }
+    
+    private func copyCapacityRow(_ row: SystemInfoCapacityRow) {
+        switch row {
+        case .total:
+            copy(text: totalLabel.text!)
+        case .available:
+            copy(text: availableLabel.text!)
+        }
+    }
+    
+    private func copyNetworkRow(_ row: SystemInfoNetworkRow) {
+        switch row {
+        case .wiFi:
+            copy(text: wifiLabel.text!)
+        case .cellular:
+            copy(text: cellularLabel.text!)
+        }
+    }
+    
+    private func copy(text: String) {
+        UIPasteboard.general.string = text
+        showToast(message: "Copied")
     }
 }
