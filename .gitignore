@@ -2,5 +2,4 @@ Pods/
 *.xcuserstate
 *.xcuserstate
 *.xcworkspacedata
-*.plist
-*.plist
+Guard.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
