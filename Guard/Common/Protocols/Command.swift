@@ -1,0 +1,13 @@
+//
+//  Command.swift
+//  Guard
+//
+//  Created by Denys on 7/20/19.
+//  Copyright © 2019 Litvinskii Denis. All rights reserved.
+//
+
+import Foundation
+
+protocol Command {
+    func execute()
+}
