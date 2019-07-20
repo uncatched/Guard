@@ -28,9 +28,16 @@
 		927FA21D22C9046800731B43 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927FA21C22C9046800731B43 /* StorageManager.swift */; };
 		92B14FE622C79C2D0055FFF0 /* Double+Formats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B14FE522C79C2D0055FFF0 /* Double+Formats.swift */; };
 		92C573B422C26BD000A9B424 /* UIColor+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C573B322C26BD000A9B424 /* UIColor+Colors.swift */; };
+		92E6BF0D22E3081400180FF7 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E6BF0C22E3081400180FF7 /* Command.swift */; };
+		92E6BF0F22E3086B00180FF7 /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E6BF0E22E3086B00180FF7 /* Configurator.swift */; };
+		92E6BF1222E3095C00180FF7 /* AppDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E6BF1122E3095C00180FF7 /* AppDelegateConfigurator.swift */; };
+		92E6BF1422E30AC300180FF7 /* SetupAnalyticsCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E6BF1322E30AC300180FF7 /* SetupAnalyticsCommand.swift */; };
+		92E6BF1622E30BBC00180FF7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 92E6BF1522E30BBC00180FF7 /* GoogleService-Info.plist */; };
+		C2D1AE6DE74B2B7D728AA299 /* libPods-Guard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A3E0666F257CDA2065271FB /* libPods-Guard.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A3E0666F257CDA2065271FB /* libPods-Guard.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Guard.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9218F16B22C0E52F008DAC76 /* Guard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9218F16E22C0E52F008DAC76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9218F17322C0E52F008DAC76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +61,13 @@
 		927FA21C22C9046800731B43 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		92B14FE522C79C2D0055FFF0 /* Double+Formats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Formats.swift"; sourceTree = "<group>"; };
 		92C573B322C26BD000A9B424 /* UIColor+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Colors.swift"; sourceTree = "<group>"; };
+		92E6BF0C22E3081400180FF7 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		92E6BF0E22E3086B00180FF7 /* Configurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurator.swift; sourceTree = "<group>"; };
+		92E6BF1122E3095C00180FF7 /* AppDelegateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateConfigurator.swift; sourceTree = "<group>"; };
+		92E6BF1322E30AC300180FF7 /* SetupAnalyticsCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAnalyticsCommand.swift; sourceTree = "<group>"; };
+		92E6BF1522E30BBC00180FF7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B1B32BF85149E5A80C39F0CE /* Pods-Guard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guard.release.xcconfig"; path = "Target Support Files/Pods-Guard/Pods-Guard.release.xcconfig"; sourceTree = "<group>"; };
+		D4BDC7207554ECCA9FDA23C1 /* Pods-Guard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guard.debug.xcconfig"; path = "Target Support Files/Pods-Guard/Pods-Guard.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,17 +75,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2D1AE6DE74B2B7D728AA299 /* libPods-Guard.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22CFBB0E2331BC3418805F2B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D4BDC7207554ECCA9FDA23C1 /* Pods-Guard.debug.xcconfig */,
+				B1B32BF85149E5A80C39F0CE /* Pods-Guard.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		9218F16222C0E52F008DAC76 = {
 			isa = PBXGroup;
 			children = (
 				9218F16D22C0E52F008DAC76 /* Guard */,
 				9218F16C22C0E52F008DAC76 /* Products */,
+				22CFBB0E2331BC3418805F2B /* Pods */,
+				E252D902D18CFF58B8042649 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,8 +112,8 @@
 		9218F16D22C0E52F008DAC76 /* Guard */ = {
 			isa = PBXGroup;
 			children = (
+				92E6BF0922E301B500180FF7 /* App */,
 				92C573B222C26BC800A9B424 /* Common */,
-				9218F16E22C0E52F008DAC76 /* AppDelegate.swift */,
 				9218F18022C0E53E008DAC76 /* Modules */,
 				9218F18222C0E556008DAC76 /* Resources */,
 			);
@@ -120,6 +146,7 @@
 				9218F17522C0E530008DAC76 /* Assets.xcassets */,
 				9218F17722C0E530008DAC76 /* LaunchScreen.storyboard */,
 				9218F17A22C0E530008DAC76 /* Info.plist */,
+				92E6BF1522E30BBC00180FF7 /* GoogleService-Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -200,12 +227,48 @@
 		92C573B222C26BC800A9B424 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				92E6BF0B22E307BA00180FF7 /* Protocols */,
 				9270C07522C8B9E0004CD760 /* Models */,
 				92C573B322C26BD000A9B424 /* UIColor+Colors.swift */,
 				9273027A22C333A000931541 /* Device.swift */,
 				92B14FE522C79C2D0055FFF0 /* Double+Formats.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		92E6BF0922E301B500180FF7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				92E6BF1022E3094D00180FF7 /* Commands */,
+				9218F16E22C0E52F008DAC76 /* AppDelegate.swift */,
+				92E6BF1122E3095C00180FF7 /* AppDelegateConfigurator.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		92E6BF0B22E307BA00180FF7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				92E6BF0C22E3081400180FF7 /* Command.swift */,
+				92E6BF0E22E3086B00180FF7 /* Configurator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		92E6BF1022E3094D00180FF7 /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				92E6BF1322E30AC300180FF7 /* SetupAnalyticsCommand.swift */,
+			);
+			path = Commands;
+			sourceTree = "<group>";
+		};
+		E252D902D18CFF58B8042649 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A3E0666F257CDA2065271FB /* libPods-Guard.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,9 +278,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9218F17D22C0E530008DAC76 /* Build configuration list for PBXNativeTarget "Guard" */;
 			buildPhases = (
+				70222BFF7E4F1A7B61615539 /* [CP] Check Pods Manifest.lock */,
 				9218F16722C0E52F008DAC76 /* Sources */,
 				9218F16822C0E52F008DAC76 /* Frameworks */,
 				9218F16922C0E52F008DAC76 /* Resources */,
+				92E6BF1722E30D1300180FF7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -267,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9218F17922C0E530008DAC76 /* LaunchScreen.storyboard in Resources */,
+				92E6BF1622E30BBC00180FF7 /* GoogleService-Info.plist in Resources */,
 				9218F18722C0E67A008DAC76 /* SystemInfo.storyboard in Resources */,
 				9218F19122C0E712008DAC76 /* Storage.storyboard in Resources */,
 				9218F18C22C0E6BE008DAC76 /* Scan.storyboard in Resources */,
@@ -278,19 +344,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		70222BFF7E4F1A7B61615539 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Guard-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92E6BF1722E30D1300180FF7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9218F16722C0E52F008DAC76 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92E6BF1422E30AC300180FF7 /* SetupAnalyticsCommand.swift in Sources */,
+				92E6BF0F22E3086B00180FF7 /* Configurator.swift in Sources */,
 				9218F18522C0E672008DAC76 /* SystemInfoTableViewController.swift in Sources */,
 				92B14FE622C79C2D0055FFF0 /* Double+Formats.swift in Sources */,
 				92460F9922CDC772001E4AC5 /* PasswordDetailsViewController.swift in Sources */,
 				927FA21D22C9046800731B43 /* StorageManager.swift in Sources */,
 				922B3E6622C88D07003FC90D /* AddPasswordTableViewController.swift in Sources */,
 				9244865622CE007100233499 /* DeleteMediaRule.swift in Sources */,
+				92E6BF1222E3095C00180FF7 /* AppDelegateConfigurator.swift in Sources */,
 				92C573B422C26BD000A9B424 /* UIColor+Colors.swift in Sources */,
 				9244865122CE002900233499 /* DefaultsManager.swift in Sources */,
+				92E6BF0D22E3081400180FF7 /* Command.swift in Sources */,
 				9218F19422C0E73A008DAC76 /* SettingsTableViewController.swift in Sources */,
 				9218F16F22C0E52F008DAC76 /* AppDelegate.swift in Sources */,
 				9218F18F22C0E70C008DAC76 /* StorageTableViewController.swift in Sources */,
@@ -440,9 +553,11 @@
 		};
 		9218F17E22C0E530008DAC76 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4BDC7207554ECCA9FDA23C1 /* Pods-Guard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 2X583S7UQZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Guard/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
@@ -459,6 +574,7 @@
 		};
 		9218F17F22C0E530008DAC76 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1B32BF85149E5A80C39F0CE /* Pods-Guard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

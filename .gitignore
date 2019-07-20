@@ -1,2 +1,6 @@
-
-Guard.xcodeproj/project.xcworkspace/xcuserdata/denis.xcuserdatad/UserInterfaceState.xcuserstate
+Pods/
+*.xcuserstate
+*.xcuserstate
+*.xcworkspacedata
+*.plist
+*.plist
