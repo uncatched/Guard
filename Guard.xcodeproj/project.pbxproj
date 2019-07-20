@@ -33,6 +33,8 @@
 		92E6BF1222E3095C00180FF7 /* AppDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E6BF1122E3095C00180FF7 /* AppDelegateConfigurator.swift */; };
 		92E6BF1422E30AC300180FF7 /* SetupAnalyticsCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E6BF1322E30AC300180FF7 /* SetupAnalyticsCommand.swift */; };
 		92E6BF1622E30BBC00180FF7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 92E6BF1522E30BBC00180FF7 /* GoogleService-Info.plist */; };
+		92E6BF1A22E3189800180FF7 /* SystemInfoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E6BF1922E3189800180FF7 /* SystemInfoSection.swift */; };
+		92E6BF1C22E31D5100180FF7 /* UIViewController+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E6BF1B22E31D5100180FF7 /* UIViewController+Toast.swift */; };
 		C2D1AE6DE74B2B7D728AA299 /* libPods-Guard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A3E0666F257CDA2065271FB /* libPods-Guard.a */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +68,8 @@
 		92E6BF1122E3095C00180FF7 /* AppDelegateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateConfigurator.swift; sourceTree = "<group>"; };
 		92E6BF1322E30AC300180FF7 /* SetupAnalyticsCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAnalyticsCommand.swift; sourceTree = "<group>"; };
 		92E6BF1522E30BBC00180FF7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		92E6BF1922E3189800180FF7 /* SystemInfoSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemInfoSection.swift; sourceTree = "<group>"; };
+		92E6BF1B22E31D5100180FF7 /* UIViewController+Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Toast.swift"; sourceTree = "<group>"; };
 		B1B32BF85149E5A80C39F0CE /* Pods-Guard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guard.release.xcconfig"; path = "Target Support Files/Pods-Guard/Pods-Guard.release.xcconfig"; sourceTree = "<group>"; };
 		D4BDC7207554ECCA9FDA23C1 /* Pods-Guard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guard.debug.xcconfig"; path = "Target Support Files/Pods-Guard/Pods-Guard.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,6 +158,7 @@
 		9218F18322C0E654008DAC76 /* SystemInfo */ = {
 			isa = PBXGroup;
 			children = (
+				92E6BF1822E3185300180FF7 /* Sections */,
 				9218F18422C0E672008DAC76 /* SystemInfoTableViewController.swift */,
 				9218F18622C0E67A008DAC76 /* SystemInfo.storyboard */,
 			);
@@ -227,6 +232,7 @@
 		92C573B222C26BC800A9B424 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				92E6BF1D22E31D7800180FF7 /* Extension */,
 				92E6BF0B22E307BA00180FF7 /* Protocols */,
 				9270C07522C8B9E0004CD760 /* Models */,
 				92C573B322C26BD000A9B424 /* UIColor+Colors.swift */,
@@ -261,6 +267,22 @@
 				92E6BF1322E30AC300180FF7 /* SetupAnalyticsCommand.swift */,
 			);
 			path = Commands;
+			sourceTree = "<group>";
+		};
+		92E6BF1822E3185300180FF7 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				92E6BF1922E3189800180FF7 /* SystemInfoSection.swift */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		92E6BF1D22E31D7800180FF7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				92E6BF1B22E31D5100180FF7 /* UIViewController+Toast.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		E252D902D18CFF58B8042649 /* Frameworks */ = {
@@ -398,6 +420,8 @@
 				92B14FE622C79C2D0055FFF0 /* Double+Formats.swift in Sources */,
 				92460F9922CDC772001E4AC5 /* PasswordDetailsViewController.swift in Sources */,
 				927FA21D22C9046800731B43 /* StorageManager.swift in Sources */,
+				92E6BF1C22E31D5100180FF7 /* UIViewController+Toast.swift in Sources */,
+				92E6BF1A22E3189800180FF7 /* SystemInfoSection.swift in Sources */,
 				922B3E6622C88D07003FC90D /* AddPasswordTableViewController.swift in Sources */,
 				9244865622CE007100233499 /* DeleteMediaRule.swift in Sources */,
 				92E6BF1222E3095C00180FF7 /* AppDelegateConfigurator.swift in Sources */,
