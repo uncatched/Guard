@@ -23,6 +23,13 @@
 		9244865122CE002900233499 /* DefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9244865022CE002900233499 /* DefaultsManager.swift */; };
 		9244865622CE007100233499 /* DeleteMediaRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9244865522CE007100233499 /* DeleteMediaRule.swift */; };
 		92460F9922CDC772001E4AC5 /* PasswordDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92460F9822CDC772001E4AC5 /* PasswordDetailsViewController.swift */; };
+		9268AAB222EF5BC5005F7CF7 /* ArchiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9268AAB122EF5BC5005F7CF7 /* ArchiveViewController.swift */; };
+		9268AAB422EF5BFA005F7CF7 /* Archive.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9268AAB322EF5BFA005F7CF7 /* Archive.storyboard */; };
+		9268AAB722EF6065005F7CF7 /* CellReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9268AAB622EF6065005F7CF7 /* CellReusable.swift */; };
+		9268AAB922EF609B005F7CF7 /* SizeConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9268AAB822EF609B005F7CF7 /* SizeConfigurable.swift */; };
+		9268AABC22EF6146005F7CF7 /* ArchiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9268AABA22EF6146005F7CF7 /* ArchiveCell.swift */; };
+		9268AABD22EF6146005F7CF7 /* ArchiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9268AABB22EF6146005F7CF7 /* ArchiveCell.xib */; };
+		9268AABF22EF6459005F7CF7 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9268AABE22EF6459005F7CF7 /* NibLoadable.swift */; };
 		9270C07722C8B9F9004CD760 /* StorageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9270C07622C8B9F9004CD760 /* StorageData.swift */; };
 		9273027B22C333A000931541 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9273027A22C333A000931541 /* Device.swift */; };
 		927FA21D22C9046800731B43 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927FA21C22C9046800731B43 /* StorageManager.swift */; };
@@ -58,6 +65,13 @@
 		9244865022CE002900233499 /* DefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsManager.swift; sourceTree = "<group>"; };
 		9244865522CE007100233499 /* DeleteMediaRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteMediaRule.swift; sourceTree = "<group>"; };
 		92460F9822CDC772001E4AC5 /* PasswordDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordDetailsViewController.swift; sourceTree = "<group>"; };
+		9268AAB122EF5BC5005F7CF7 /* ArchiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveViewController.swift; sourceTree = "<group>"; };
+		9268AAB322EF5BFA005F7CF7 /* Archive.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Archive.storyboard; sourceTree = "<group>"; };
+		9268AAB622EF6065005F7CF7 /* CellReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellReusable.swift; sourceTree = "<group>"; };
+		9268AAB822EF609B005F7CF7 /* SizeConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeConfigurable.swift; sourceTree = "<group>"; };
+		9268AABA22EF6146005F7CF7 /* ArchiveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveCell.swift; sourceTree = "<group>"; };
+		9268AABB22EF6146005F7CF7 /* ArchiveCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArchiveCell.xib; sourceTree = "<group>"; };
+		9268AABE22EF6459005F7CF7 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		9270C07622C8B9F9004CD760 /* StorageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageData.swift; sourceTree = "<group>"; };
 		9273027A22C333A000931541 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		927FA21C22C9046800731B43 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
@@ -132,6 +146,7 @@
 				9218F18822C0E6A0008DAC76 /* Scan */,
 				9218F18D22C0E6F7008DAC76 /* Storage */,
 				9218F19222C0E723008DAC76 /* Settings */,
+				9268AAB022EF5BAC005F7CF7 /* Archive */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -219,6 +234,25 @@
 			path = Defaults;
 			sourceTree = "<group>";
 		};
+		9268AAB022EF5BAC005F7CF7 /* Archive */ = {
+			isa = PBXGroup;
+			children = (
+				9268AAB522EF6021005F7CF7 /* Views */,
+				9268AAB122EF5BC5005F7CF7 /* ArchiveViewController.swift */,
+				9268AAB322EF5BFA005F7CF7 /* Archive.storyboard */,
+			);
+			path = Archive;
+			sourceTree = "<group>";
+		};
+		9268AAB522EF6021005F7CF7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9268AABA22EF6146005F7CF7 /* ArchiveCell.swift */,
+				9268AABB22EF6146005F7CF7 /* ArchiveCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		9270C07522C8B9E0004CD760 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +272,7 @@
 				92C573B322C26BD000A9B424 /* UIColor+Colors.swift */,
 				9273027A22C333A000931541 /* Device.swift */,
 				92B14FE522C79C2D0055FFF0 /* Double+Formats.swift */,
+				9268AABE22EF6459005F7CF7 /* NibLoadable.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -257,6 +292,8 @@
 			children = (
 				92E6BF0C22E3081400180FF7 /* Command.swift */,
 				92E6BF0E22E3086B00180FF7 /* Configurator.swift */,
+				9268AAB622EF6065005F7CF7 /* CellReusable.swift */,
+				9268AAB822EF609B005F7CF7 /* SizeConfigurable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -353,6 +390,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9268AABD22EF6146005F7CF7 /* ArchiveCell.xib in Resources */,
+				9268AAB422EF5BFA005F7CF7 /* Archive.storyboard in Resources */,
 				9218F17922C0E530008DAC76 /* LaunchScreen.storyboard in Resources */,
 				92E6BF1622E30BBC00180FF7 /* GoogleService-Info.plist in Resources */,
 				9218F18722C0E67A008DAC76 /* SystemInfo.storyboard in Resources */,
@@ -414,6 +453,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9268AAB722EF6065005F7CF7 /* CellReusable.swift in Sources */,
 				92E6BF1422E30AC300180FF7 /* SetupAnalyticsCommand.swift in Sources */,
 				92E6BF0F22E3086B00180FF7 /* Configurator.swift in Sources */,
 				9218F18522C0E672008DAC76 /* SystemInfoTableViewController.swift in Sources */,
@@ -427,13 +467,17 @@
 				92E6BF1222E3095C00180FF7 /* AppDelegateConfigurator.swift in Sources */,
 				92C573B422C26BD000A9B424 /* UIColor+Colors.swift in Sources */,
 				9244865122CE002900233499 /* DefaultsManager.swift in Sources */,
+				9268AABC22EF6146005F7CF7 /* ArchiveCell.swift in Sources */,
+				9268AAB222EF5BC5005F7CF7 /* ArchiveViewController.swift in Sources */,
 				92E6BF0D22E3081400180FF7 /* Command.swift in Sources */,
 				9218F19422C0E73A008DAC76 /* SettingsTableViewController.swift in Sources */,
+				9268AABF22EF6459005F7CF7 /* NibLoadable.swift in Sources */,
 				9218F16F22C0E52F008DAC76 /* AppDelegate.swift in Sources */,
 				9218F18F22C0E70C008DAC76 /* StorageTableViewController.swift in Sources */,
 				9270C07722C8B9F9004CD760 /* StorageData.swift in Sources */,
 				9273027B22C333A000931541 /* Device.swift in Sources */,
 				9218F19822C0E7B1008DAC76 /* ScanTableViewController.swift in Sources */,
+				9268AAB922EF609B005F7CF7 /* SizeConfigurable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
