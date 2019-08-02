@@ -12,9 +12,4 @@ final class ArchiveCell: UICollectionViewCell, CellReusable, NibLoadable {
     
     // MARK: - Outlets
     @IBOutlet weak var titleLabel: UILabel!
-    
-    // MARK: - Life Cycle
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
 }

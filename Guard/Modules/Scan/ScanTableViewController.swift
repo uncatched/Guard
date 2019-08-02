@@ -210,7 +210,7 @@ extension ScanTableViewController {
         case .oneYear:
             deleteMediaAfterOneYear(data: data)
         case .twoYears:
-            deleteMediaAfterTwoYears(data: data)
+            deleteMediaAfterTwoYears(data:  data)
         default:
             completion()
         }

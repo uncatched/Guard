@@ -24,17 +24,17 @@ final class ArchiveViewController: UICollectionViewController {
 extension ArchiveViewController {
     
     @IBAction private func onAddButton() {
+        guard let imagePickerController = storyboard?.instantiateViewController(withIdentifier: "ImagePickerController") as? ImagePickerController else {
+            return
+        }
         
+        let navigationController = UINavigationController(rootViewController: imagePickerController)
+        present(navigationController, animated: true, completion: nil)
     }
 }
 
 // MARK: - UICollectionViewDataSource/Delegate/FlowLayout
 extension ArchiveViewController: UICollectionViewDelegateFlowLayout {
-    
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return archives.count
