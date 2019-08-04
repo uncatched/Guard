@@ -44,3 +44,41 @@ final class StorageManager {
         UserDefaults.standard.set(encodedData, forKey: "StorageData")
     }
 }
+
+// MARK: - Zip
+extension StorageManager {
+    
+    static var zipData: [ZipFile] {
+        guard let objectsData = UserDefaults.standard.object(forKey: "Zip") as? Data else {
+            return []
+        }
+        
+        let decoder = JSONDecoder()
+        guard let objects = try? decoder.decode([ZipFile].self, from: objectsData) else {
+            return []
+        }
+        
+        return objects
+    }
+    
+    static func saveZip(_ data: ZipFile) {
+        var objects = StorageManager.zipData
+        objects.append(data)
+        StorageManager.saveZip(objects)
+    }
+    
+    static func deleteZipObject(with path: String) {
+        var objects = StorageManager.zipData
+        objects.removeAll { $0.path == path }
+        StorageManager.saveZip(objects)
+    }
+    
+    private static func saveZip(_ objects: [ZipFile]) {
+        let encoder = JSONEncoder()
+        guard let encodedData = try? encoder.encode(objects) else {
+            return
+        }
+        
+        UserDefaults.standard.set(encodedData, forKey: "Zip")
+    }
+}

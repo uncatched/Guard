@@ -11,12 +11,22 @@ import UIKit
 final class ArchiveViewController: UICollectionViewController {
     
     // MARK: - Properties
-    private var archives: [String] = []
+    private var archives: [ZipFile] = [] {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupCollectionView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        archives = StorageManager.zipData
     }
 }
 
@@ -41,7 +51,9 @@ extension ArchiveViewController: UICollectionViewDelegateFlowLayout {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ArchiveCell.reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ArchiveCell.reuseIdentifier, for: indexPath) as! ArchiveCell
+        let zip = archives[indexPath.row]
+        cell.configure(with: zip.filename)
         
         return cell
     }

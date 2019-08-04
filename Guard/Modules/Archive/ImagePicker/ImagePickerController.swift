@@ -14,7 +14,7 @@ final class ImagePickerController: UICollectionViewController {
     @IBOutlet private weak var doneItem: UIBarButtonItem!
     
     // MARK: - Properties
-    private var imagesData: [Data] = []
+    private var imagesData: [PhotosManager.ImageData] = []
     private var selectedIndexes: [IndexPath] = [] {
         didSet {
             doneItem.isEnabled = !selectedIndexes.isEmpty
@@ -29,6 +29,11 @@ final class ImagePickerController: UICollectionViewController {
     
     private lazy var photosManager: PhotosManager = {
         let manager = PhotosManager()
+        return manager
+    }()
+    
+    private lazy var zipManager: ZipManager = {
+        let manager = ZipManager()
         return manager
     }()
     
@@ -121,24 +126,53 @@ extension ImagePickerController {
     
     private func retreiveData() {
         guard !selectedIndexes.isEmpty else {
-            proceedData()
+            presentFilenameAlert()
             return
         }
         
         let indexPath = selectedIndexes.removeFirst()
-        photosManager.requestImageData(at: indexPath, with: .image) { [weak self] data in
-            guard let data = data else {
+        photosManager.requestImageData(at: indexPath, with: .image) { [weak self] result in
+            guard let result = result else {
                 self?.retreiveData()
                 return
             }
             
-            self?.imagesData.append(data)
+            self?.imagesData.append(result)
             self?.retreiveData()
         }
     }
     
-    private func proceedData() {
+    private func proceedData(filename: String) {
+        let data = imagesData
+        
+        do {
+            let path = try zipManager.zip(data: data, filename: filename)
+            let zip = ZipFile(filename: filename, path: path)
+            StorageManager.saveZip(zip)
+            dismiss(animated: true, completion: nil)
+        } catch {
+            print("error")
+        }
+        
         print()
+    }
+    
+    private func presentFilenameAlert() {
+        let alertController = UIAlertController(title: "Enter a file name", message: nil, preferredStyle: .alert)
+        alertController.addTextField { textfield in
+            textfield.placeholder = "Name"
+        }
+        
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { [unowned self] _ in
+            let filename = alertController.textFields?.first?.text ?? UUID().uuidString
+            self.proceedData(filename: filename)
+        }))
+        
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { [unowned self] _ in
+            self.dismiss(animated: true, completion: nil)
+        }))
+        
+        present(alertController, animated: true, completion: nil)
     }
 }
 

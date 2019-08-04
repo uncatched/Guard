@@ -20,6 +20,8 @@ final class PhotosManager {
 // MARK: - Public methods
 extension PhotosManager {
     
+    typealias ImageData = (data: Data, format: RegistrationDocumentFormat)
+    
     func requestAuthorization(completion: @escaping (PHAuthorizationStatus) -> Void) {
         PHPhotoLibrary.requestAuthorization { status in
             DispatchQueue.main.async {
@@ -58,14 +60,20 @@ extension PhotosManager {
         }
     }
     
-    func requestImageData(at indexPath: IndexPath, with type: PHAssetMediaType, completion: @escaping (Data?) -> Void) {
+    func requestImageData(at indexPath: IndexPath, with type: PHAssetMediaType,
+                          completion: @escaping (ImageData?) -> Void) {
         guard let assets = assets[type],
             let asset = assets[sections[indexPath.section]]?[indexPath.row] else {
                 return
         }
         
-        imageManager.requestImageData(for: asset, options: nil) { data, _, _, _ in
-            completion(data)
+        imageManager.requestImageData(for: asset, options: nil) { data, name, _, _ in
+            guard let data = data, let name = name else {
+                completion(nil)
+                return
+            }
+            
+            completion(ImageData(data: data, format: RegistrationDocumentFormat.format(from: name)))
         }
     }
 }
@@ -94,5 +102,47 @@ extension PhotosManager {
         }
         
         sections = self.assets[type]?.keys.sorted() ?? []
+    }
+}
+
+extension PhotosManager {
+    
+    enum RegistrationDocumentFormat: String {
+        case png = "png"
+        case jpg = "jpg"
+        case jpeg = "jpeg"
+        case gif = "gif"
+        case pdf = "pdf"
+        
+        static func format(from string: String) -> RegistrationDocumentFormat {
+            if string.hasSuffix("png") {
+                return .png
+            } else if string.hasSuffix("jpg") {
+                return .jpg
+            } else if string.hasSuffix("jpeg") {
+                return .jpeg
+            } else if string.hasSuffix("gif") {
+                return .gif
+            } else if string.hasSuffix("pdf") {
+                return .pdf
+            } else {
+                preconditionFailure("Unsupported format for image: \(string)")
+            }
+        }
+        
+        var contentType: String {
+            switch self {
+            case .png:
+                return "image/png"
+            case .jpg:
+                return "image/jpg"
+            case .jpeg:
+                return "image/jpeg"
+            case .gif:
+                return "image/gif"
+            case .pdf:
+                return "application/pdf"
+            }
+        }
     }
 }
