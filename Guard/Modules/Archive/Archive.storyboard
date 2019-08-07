@@ -47,7 +47,7 @@
         <scene sceneID="Cjq-FO-rKt">
             <objects>
                 <tableViewController storyboardIdentifier="ZipDetailsViewController" id="4X2-Po-WoD" customClass="ZipDetailsViewController" customModule="Guard" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="4w4-Pm-Ovv">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="4w4-Pm-Ovv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -143,6 +143,35 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Ti8-Nx-IVp">
+                                        <rect key="frame" x="0.0" y="211" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ti8-Nx-IVp" id="gRz-mR-gYX">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eoc-Yc-ek7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="pn7-kH-KaB"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <state key="normal" title="Remove">
+                                                        <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="onDeleteButton" destination="4X2-Po-WoD" eventType="touchUpInside" id="avr-6G-4Fj"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Eoc-Yc-ek7" secondAttribute="bottom" id="IcA-8h-Lau"/>
+                                                <constraint firstItem="Eoc-Yc-ek7" firstAttribute="leading" secondItem="gRz-mR-gYX" secondAttribute="leading" id="Iso-Ml-PnY"/>
+                                                <constraint firstAttribute="trailing" secondItem="Eoc-Yc-ek7" secondAttribute="trailing" id="jc1-ph-ajr"/>
+                                                <constraint firstItem="Eoc-Yc-ek7" firstAttribute="top" secondItem="gRz-mR-gYX" secondAttribute="top" id="jsJ-gJ-LCq"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -152,11 +181,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="1VB-5i-wIn">
-                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="FoO-ha-dd4">
-                            <connections>
-                                <action selector="onDeleteButton" destination="4X2-Po-WoD" id="AuD-hu-wrx"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="ofP-dq-wfy">
                             <connections>
                                 <action selector="onShareButton" destination="4X2-Po-WoD" id="ezs-ds-Sho"/>
