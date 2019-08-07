@@ -11,4 +11,7 @@ import Foundation
 struct ZipFile: Codable {
     let filename: String
     let path: String
+    let timestamp: Double
+    let filesCount: Int
+    let size: Int
 }

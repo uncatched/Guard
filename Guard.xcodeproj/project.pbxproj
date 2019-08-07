@@ -53,6 +53,10 @@
 		92E6BF1622E30BBC00180FF7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 92E6BF1522E30BBC00180FF7 /* GoogleService-Info.plist */; };
 		92E6BF1A22E3189800180FF7 /* SystemInfoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E6BF1922E3189800180FF7 /* SystemInfoSection.swift */; };
 		92E6BF1C22E31D5100180FF7 /* UIViewController+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E6BF1B22E31D5100180FF7 /* UIViewController+Toast.swift */; };
+		92E91AF722F8922300E21338 /* ArchiveEmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E91AF522F8922300E21338 /* ArchiveEmptyCell.swift */; };
+		92E91AF822F8922300E21338 /* ArchiveEmptyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92E91AF622F8922300E21338 /* ArchiveEmptyCell.xib */; };
+		92E91AFB22F895C000E21338 /* ZipDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E91AFA22F895C000E21338 /* ZipDetailsViewController.swift */; };
+		92F29BB122FABFCC00869F66 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F29BB022FABFCC00869F66 /* Storage.swift */; };
 		C2D1AE6DE74B2B7D728AA299 /* libPods-Guard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A3E0666F257CDA2065271FB /* libPods-Guard.a */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +110,10 @@
 		92E6BF1522E30BBC00180FF7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		92E6BF1922E3189800180FF7 /* SystemInfoSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemInfoSection.swift; sourceTree = "<group>"; };
 		92E6BF1B22E31D5100180FF7 /* UIViewController+Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Toast.swift"; sourceTree = "<group>"; };
+		92E91AF522F8922300E21338 /* ArchiveEmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveEmptyCell.swift; sourceTree = "<group>"; };
+		92E91AF622F8922300E21338 /* ArchiveEmptyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArchiveEmptyCell.xib; sourceTree = "<group>"; };
+		92E91AFA22F895C000E21338 /* ZipDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipDetailsViewController.swift; sourceTree = "<group>"; };
+		92F29BB022FABFCC00869F66 /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		B1B32BF85149E5A80C39F0CE /* Pods-Guard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guard.release.xcconfig"; path = "Target Support Files/Pods-Guard/Pods-Guard.release.xcconfig"; sourceTree = "<group>"; };
 		D4BDC7207554ECCA9FDA23C1 /* Pods-Guard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guard.debug.xcconfig"; path = "Target Support Files/Pods-Guard/Pods-Guard.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -265,6 +273,7 @@
 		9229D76E22F01DEA00E16A64 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				92F29BB022FABFCC00869F66 /* Storage.swift */,
 				927EB5DC22F0A61F009CDFB1 /* PhotosManager.swift */,
 				92D8306622F3F1D6009EE7FE /* ZipManager.swift */,
 			);
@@ -300,6 +309,7 @@
 		9268AAB022EF5BAC005F7CF7 /* Archive */ = {
 			isa = PBXGroup;
 			children = (
+				92E91AF922F895AE00E21338 /* Details */,
 				9229D76422F01A1500E16A64 /* ImagePicker */,
 				9268AAB522EF6021005F7CF7 /* Views */,
 				9268AAB122EF5BC5005F7CF7 /* ArchiveViewController.swift */,
@@ -313,6 +323,8 @@
 			children = (
 				9268AABA22EF6146005F7CF7 /* ArchiveCell.swift */,
 				9268AABB22EF6146005F7CF7 /* ArchiveCell.xib */,
+				92E91AF522F8922300E21338 /* ArchiveEmptyCell.swift */,
+				92E91AF622F8922300E21338 /* ArchiveEmptyCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -385,6 +397,14 @@
 				92E6BF1B22E31D5100180FF7 /* UIViewController+Toast.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		92E91AF922F895AE00E21338 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				92E91AFA22F895C000E21338 /* ZipDetailsViewController.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 		E252D902D18CFF58B8042649 /* Frameworks */ = {
@@ -461,6 +481,7 @@
 				9218F17922C0E530008DAC76 /* LaunchScreen.storyboard in Resources */,
 				92E6BF1622E30BBC00180FF7 /* GoogleService-Info.plist in Resources */,
 				9218F18722C0E67A008DAC76 /* SystemInfo.storyboard in Resources */,
+				92E91AF822F8922300E21338 /* ArchiveEmptyCell.xib in Resources */,
 				92DF600622F29F480001E3FE /* ImagePickerHeaderView.xib in Resources */,
 				9218F19122C0E712008DAC76 /* Storage.storyboard in Resources */,
 				9218F18C22C0E6BE008DAC76 /* Scan.storyboard in Resources */,
@@ -526,6 +547,7 @@
 				92E6BF1422E30AC300180FF7 /* SetupAnalyticsCommand.swift in Sources */,
 				92E6BF0F22E3086B00180FF7 /* Configurator.swift in Sources */,
 				9219BB1822F0BCA300C91B79 /* ImagePickerEmptyCell.swift in Sources */,
+				92F29BB122FABFCC00869F66 /* Storage.swift in Sources */,
 				9218F18522C0E672008DAC76 /* SystemInfoTableViewController.swift in Sources */,
 				927EB5DD22F0A61F009CDFB1 /* PhotosManager.swift in Sources */,
 				92B14FE622C79C2D0055FFF0 /* Double+Formats.swift in Sources */,
@@ -545,6 +567,7 @@
 				92E6BF0D22E3081400180FF7 /* Command.swift in Sources */,
 				9218F19422C0E73A008DAC76 /* SettingsTableViewController.swift in Sources */,
 				9268AABF22EF6459005F7CF7 /* NibLoadable.swift in Sources */,
+				92E91AFB22F895C000E21338 /* ZipDetailsViewController.swift in Sources */,
 				9218F16F22C0E52F008DAC76 /* AppDelegate.swift in Sources */,
 				9229D76A22F01AF300E16A64 /* ImagePickerCell.swift in Sources */,
 				92D8306722F3F1D6009EE7FE /* ZipManager.swift in Sources */,
@@ -553,6 +576,7 @@
 				9270C07722C8B9F9004CD760 /* StorageData.swift in Sources */,
 				9273027B22C333A000931541 /* Device.swift in Sources */,
 				9218F19822C0E7B1008DAC76 /* ScanTableViewController.swift in Sources */,
+				92E91AF722F8922300E21338 /* ArchiveEmptyCell.swift in Sources */,
 				9268AAB922EF609B005F7CF7 /* SizeConfigurable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

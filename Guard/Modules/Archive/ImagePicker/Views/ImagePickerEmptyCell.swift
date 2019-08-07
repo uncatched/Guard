@@ -8,9 +8,4 @@
 
 import UIKit
 
-final class ImagePickerEmptyCell: UICollectionViewCell, CellReusable, NibLoadable {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-}
+final class ImagePickerEmptyCell: UICollectionViewCell, CellReusable, NibLoadable {}

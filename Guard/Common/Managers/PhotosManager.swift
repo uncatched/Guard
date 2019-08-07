@@ -113,6 +113,7 @@ extension PhotosManager {
         case jpeg = "jpeg"
         case gif = "gif"
         case pdf = "pdf"
+        case heic = "heic"
         
         static func format(from string: String) -> RegistrationDocumentFormat {
             if string.hasSuffix("png") {
@@ -125,23 +126,10 @@ extension PhotosManager {
                 return .gif
             } else if string.hasSuffix("pdf") {
                 return .pdf
+            } else if string.hasSuffix("heic") {
+                return .heic
             } else {
                 preconditionFailure("Unsupported format for image: \(string)")
-            }
-        }
-        
-        var contentType: String {
-            switch self {
-            case .png:
-                return "image/png"
-            case .jpg:
-                return "image/jpg"
-            case .jpeg:
-                return "image/jpeg"
-            case .gif:
-                return "image/gif"
-            case .pdf:
-                return "application/pdf"
             }
         }
     }

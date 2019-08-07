@@ -11,32 +11,40 @@ import Zip
 import minizip
 
 final class ZipManager {
+    
+    let storage: Storage
+    
+    init(storage: Storage) {
+        self.storage = storage
+    }
 }
 
 // MARK: - Public methods
 extension ZipManager {
     
-    func zip(data: [PhotosManager.ImageData], filename: String) throws -> String {
+    func zip(data: [PhotosManager.ImageData], filename: String) throws -> (path: String, size: Int) {
         var urls: [URL] = []
+        var size: Int = 0
         for fileData in data {
             guard let url = save(data: fileData) else {
                 continue
             }
             
+            size += fileData.data.count
             urls.append(url)
         }
         
-        let fileManager = FileManager.default
-        let documentsUrl = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0] as URL
-        let zipURL = documentsUrl.appendingPathComponent("\(filename).zip")
-        
+        let zipURL = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("\(filename).zip")!
         try Zip.zipFiles(paths: urls, zipFilePath: zipURL, password: nil, compression: .BestCompression, progress: nil)
         
         for url in urls {
             removeFiles(at: url)
         }
         
-        return zipURL.absoluteString
+        let data = try Data(contentsOf: zipURL)
+        let fileURL = storage.save(data: data, filename: "\(filename).zip")
+        
+        return (fileURL.absoluteString, size)
     }
 }
 

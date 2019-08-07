@@ -33,7 +33,7 @@ final class ImagePickerController: UICollectionViewController {
     }()
     
     private lazy var zipManager: ZipManager = {
-        let manager = ZipManager()
+        let manager = ZipManager(storage: Storage())
         return manager
     }()
     
@@ -146,8 +146,12 @@ extension ImagePickerController {
         let data = imagesData
         
         do {
-            let path = try zipManager.zip(data: data, filename: filename)
-            let zip = ZipFile(filename: filename, path: path)
+            let result = try zipManager.zip(data: data, filename: filename)
+            let zip = ZipFile(filename: filename,
+                              path: result.path,
+                              timestamp: Date().timeIntervalSinceReferenceDate,
+                              filesCount: data.count,
+                              size: result.size)
             StorageManager.saveZip(zip)
             dismiss(animated: true, completion: nil)
         } catch {
@@ -215,8 +219,13 @@ extension ImagePickerController {
                                                                             return UICollectionReusableView()
         }
         
-        let title = photosManager.title(for: indexPath.section, with: .image) ?? ""
-        view.configure(with: title)
+        if state == .normal {
+            let title = photosManager.title(for: indexPath.section, with: .image) ?? ""
+            view.configure(with: title)
+        } else {
+            view.frame = .zero
+        }
+        
         return view
     }
     
