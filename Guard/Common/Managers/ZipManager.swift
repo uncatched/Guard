@@ -44,6 +44,8 @@ extension ZipManager {
         let data = try Data(contentsOf: zipURL)
         let fileURL = storage.save(data: data, filename: "\(filename).zip")
         
+        removeFiles(at: zipURL)
+        
         return (fileURL.absoluteString, size)
     }
 }

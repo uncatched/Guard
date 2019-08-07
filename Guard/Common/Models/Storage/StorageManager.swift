@@ -67,19 +67,16 @@ extension StorageManager {
         StorageManager.saveZip(objects)
     }
     
-    static func deleteZipObject(with path: String) {
+    static func deleteZipObject(_ object: ZipFile) {
         var objects = StorageManager.zipData
-        deleteFile(at: path)
-        objects.removeAll { $0.path == path }
+        deleteFile(with: object.filename + ".zip")
+        objects.removeAll { $0.path == object.path }
         StorageManager.saveZip(objects)
     }
     
-    private static func deleteFile(at path: String) {
-        guard let path = URL(string: path) else {
-            return
-        }
-        
-        try! FileManager.default.removeItem(at: path)
+    private static func deleteFile(with name: String) {
+        let url = Storage().fileURL(with: name)
+        try? FileManager.default.removeItem(at: url)
     }
     
     private static func saveZip(_ objects: [ZipFile]) {

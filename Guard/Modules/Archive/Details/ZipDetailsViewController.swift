@@ -52,7 +52,7 @@ extension ZipDetailsViewController {
 extension ZipDetailsViewController {
     
     @IBAction private func onDeleteButton() {
-        StorageManager.deleteZipObject(with: zip.path)
+        StorageManager.deleteZipObject(zip)
         navigationController?.popViewController(animated: true)
     }
     
