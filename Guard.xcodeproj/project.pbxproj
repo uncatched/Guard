@@ -32,7 +32,6 @@
 		9244865622CE007100233499 /* DeleteMediaRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9244865522CE007100233499 /* DeleteMediaRule.swift */; };
 		92460F9922CDC772001E4AC5 /* PasswordDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92460F9822CDC772001E4AC5 /* PasswordDetailsViewController.swift */; };
 		924C614E22FBFDB0000724E5 /* PasscodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924C614D22FBFDB0000724E5 /* PasscodeManager.swift */; };
-		924C615022FBFF10000724E5 /* SetupRootViewCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924C614F22FBFF10000724E5 /* SetupRootViewCommand.swift */; };
 		924C615322FBFFD8000724E5 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924C615222FBFFD8000724E5 /* LaunchViewController.swift */; };
 		9268AAB222EF5BC5005F7CF7 /* ArchiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9268AAB122EF5BC5005F7CF7 /* ArchiveViewController.swift */; };
 		9268AAB422EF5BFA005F7CF7 /* Archive.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9268AAB322EF5BFA005F7CF7 /* Archive.storyboard */; };
@@ -93,7 +92,6 @@
 		9244865522CE007100233499 /* DeleteMediaRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteMediaRule.swift; sourceTree = "<group>"; };
 		92460F9822CDC772001E4AC5 /* PasswordDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordDetailsViewController.swift; sourceTree = "<group>"; };
 		924C614D22FBFDB0000724E5 /* PasscodeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeManager.swift; sourceTree = "<group>"; };
-		924C614F22FBFF10000724E5 /* SetupRootViewCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupRootViewCommand.swift; sourceTree = "<group>"; };
 		924C615222FBFFD8000724E5 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		9268AAB122EF5BC5005F7CF7 /* ArchiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveViewController.swift; sourceTree = "<group>"; };
 		9268AAB322EF5BFA005F7CF7 /* Archive.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Archive.storyboard; sourceTree = "<group>"; };
@@ -398,7 +396,6 @@
 			isa = PBXGroup;
 			children = (
 				92E6BF1322E30AC300180FF7 /* SetupAnalyticsCommand.swift */,
-				924C614F22FBFF10000724E5 /* SetupRootViewCommand.swift */,
 			);
 			path = Commands;
 			sourceTree = "<group>";
@@ -575,7 +572,6 @@
 				9229D76622F01A5900E16A64 /* ImagePickerController.swift in Sources */,
 				92460F9922CDC772001E4AC5 /* PasswordDetailsViewController.swift in Sources */,
 				927FA21D22C9046800731B43 /* StorageManager.swift in Sources */,
-				924C615022FBFF10000724E5 /* SetupRootViewCommand.swift in Sources */,
 				924C615322FBFFD8000724E5 /* LaunchViewController.swift in Sources */,
 				92E6BF1C22E31D5100180FF7 /* UIViewController+Toast.swift in Sources */,
 				92E6BF1A22E3189800180FF7 /* SystemInfoSection.swift in Sources */,

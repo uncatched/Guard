@@ -51,9 +51,6 @@ extension AppDelegate {
         let setupAnalyticsCommand = SetupAnalyticsCommand()
         configurator.add(command: setupAnalyticsCommand)
         
-//        let setupRootCommand = SetupRootViewCommand()
-//        configurator.add(command: setupRootCommand)
-        
         configurator.configure()
     }
 }
