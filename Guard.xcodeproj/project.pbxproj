@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9201DCB322F70769008C8672 /* ZipFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9201DCB222F70769008C8672 /* ZipFile.swift */; };
+		920845EA22FC0036004D743F /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 920845E922FC0036004D743F /* Launch.storyboard */; };
 		9218F16F22C0E52F008DAC76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9218F16E22C0E52F008DAC76 /* AppDelegate.swift */; };
 		9218F17422C0E52F008DAC76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9218F17222C0E52F008DAC76 /* Main.storyboard */; };
 		9218F17622C0E530008DAC76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9218F17522C0E530008DAC76 /* Assets.xcassets */; };
@@ -30,6 +31,8 @@
 		9244865122CE002900233499 /* DefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9244865022CE002900233499 /* DefaultsManager.swift */; };
 		9244865622CE007100233499 /* DeleteMediaRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9244865522CE007100233499 /* DeleteMediaRule.swift */; };
 		92460F9922CDC772001E4AC5 /* PasswordDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92460F9822CDC772001E4AC5 /* PasswordDetailsViewController.swift */; };
+		924C614E22FBFDB0000724E5 /* PasscodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924C614D22FBFDB0000724E5 /* PasscodeManager.swift */; };
+		924C615322FBFFD8000724E5 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924C615222FBFFD8000724E5 /* LaunchViewController.swift */; };
 		9268AAB222EF5BC5005F7CF7 /* ArchiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9268AAB122EF5BC5005F7CF7 /* ArchiveViewController.swift */; };
 		9268AAB422EF5BFA005F7CF7 /* Archive.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9268AAB322EF5BFA005F7CF7 /* Archive.storyboard */; };
 		9268AAB722EF6065005F7CF7 /* CellReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9268AAB622EF6065005F7CF7 /* CellReusable.swift */; };
@@ -63,6 +66,7 @@
 /* Begin PBXFileReference section */
 		6A3E0666F257CDA2065271FB /* libPods-Guard.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Guard.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9201DCB222F70769008C8672 /* ZipFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipFile.swift; sourceTree = "<group>"; };
+		920845E922FC0036004D743F /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		9218F16B22C0E52F008DAC76 /* Guard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9218F16E22C0E52F008DAC76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9218F17322C0E52F008DAC76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 		9244865022CE002900233499 /* DefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsManager.swift; sourceTree = "<group>"; };
 		9244865522CE007100233499 /* DeleteMediaRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteMediaRule.swift; sourceTree = "<group>"; };
 		92460F9822CDC772001E4AC5 /* PasswordDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordDetailsViewController.swift; sourceTree = "<group>"; };
+		924C614D22FBFDB0000724E5 /* PasscodeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeManager.swift; sourceTree = "<group>"; };
+		924C615222FBFFD8000724E5 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		9268AAB122EF5BC5005F7CF7 /* ArchiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveViewController.swift; sourceTree = "<group>"; };
 		9268AAB322EF5BFA005F7CF7 /* Archive.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Archive.storyboard; sourceTree = "<group>"; };
 		9268AAB622EF6065005F7CF7 /* CellReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellReusable.swift; sourceTree = "<group>"; };
@@ -171,6 +177,7 @@
 		9218F18022C0E53E008DAC76 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				924C615122FBFFC7000724E5 /* Launch */,
 				9218F18122C0E549008DAC76 /* Main */,
 				9218F18322C0E654008DAC76 /* SystemInfo */,
 				9218F18822C0E6A0008DAC76 /* Scan */,
@@ -276,6 +283,7 @@
 				92F29BB022FABFCC00869F66 /* Storage.swift */,
 				927EB5DC22F0A61F009CDFB1 /* PhotosManager.swift */,
 				92D8306622F3F1D6009EE7FE /* ZipManager.swift */,
+				924C614D22FBFDB0000724E5 /* PasscodeManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -304,6 +312,15 @@
 				9244865022CE002900233499 /* DefaultsManager.swift */,
 			);
 			path = Defaults;
+			sourceTree = "<group>";
+		};
+		924C615122FBFFC7000724E5 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				924C615222FBFFD8000724E5 /* LaunchViewController.swift */,
+				920845E922FC0036004D743F /* Launch.storyboard */,
+			);
+			path = Launch;
 			sourceTree = "<group>";
 		};
 		9268AAB022EF5BAC005F7CF7 /* Archive */ = {
@@ -486,6 +503,7 @@
 				9218F19122C0E712008DAC76 /* Storage.storyboard in Resources */,
 				9218F18C22C0E6BE008DAC76 /* Scan.storyboard in Resources */,
 				9229D76B22F01AF300E16A64 /* ImagePickerCell.xib in Resources */,
+				920845EA22FC0036004D743F /* Launch.storyboard in Resources */,
 				9218F17622C0E530008DAC76 /* Assets.xcassets in Resources */,
 				9218F17422C0E52F008DAC76 /* Main.storyboard in Resources */,
 				9218F19622C0E78D008DAC76 /* Settings.storyboard in Resources */,
@@ -554,6 +572,7 @@
 				9229D76622F01A5900E16A64 /* ImagePickerController.swift in Sources */,
 				92460F9922CDC772001E4AC5 /* PasswordDetailsViewController.swift in Sources */,
 				927FA21D22C9046800731B43 /* StorageManager.swift in Sources */,
+				924C615322FBFFD8000724E5 /* LaunchViewController.swift in Sources */,
 				92E6BF1C22E31D5100180FF7 /* UIViewController+Toast.swift in Sources */,
 				92E6BF1A22E3189800180FF7 /* SystemInfoSection.swift in Sources */,
 				9219BB1C22F0BF3E00C91B79 /* ImagePickerState.swift in Sources */,
@@ -563,6 +582,7 @@
 				92C573B422C26BD000A9B424 /* UIColor+Colors.swift in Sources */,
 				9244865122CE002900233499 /* DefaultsManager.swift in Sources */,
 				9268AABC22EF6146005F7CF7 /* ArchiveCell.swift in Sources */,
+				924C614E22FBFDB0000724E5 /* PasscodeManager.swift in Sources */,
 				9268AAB222EF5BC5005F7CF7 /* ArchiveViewController.swift in Sources */,
 				92E6BF0D22E3081400180FF7 /* Command.swift in Sources */,
 				9218F19422C0E73A008DAC76 /* SettingsTableViewController.swift in Sources */,
