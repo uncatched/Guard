@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ImagePickerCell" customModule="Guard" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="124" height="77"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="124" height="77"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jqb-68-pGM">
+                        <rect key="frame" x="0.0" y="0.0" width="124" height="77"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CwD-1h-m2f">
+                        <rect key="frame" x="0.0" y="0.0" width="124" height="77"/>
+                        <subviews>
+                            <view alpha="0.25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tI5-ji-38g">
+                                <rect key="frame" x="0.0" y="0.0" width="124" height="77"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="168-aa-MvK">
+                                <rect key="frame" x="92" y="45" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="Kna-43-Tg0"/>
+                                    <constraint firstAttribute="width" constant="24" id="m8G-DR-w5V"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tI5-ji-38g" firstAttribute="leading" secondItem="CwD-1h-m2f" secondAttribute="leading" id="GGI-l1-nwW"/>
+                            <constraint firstAttribute="trailing" secondItem="168-aa-MvK" secondAttribute="trailing" constant="8" id="V0o-ej-mPW"/>
+                            <constraint firstAttribute="bottom" secondItem="tI5-ji-38g" secondAttribute="bottom" id="aTp-fF-Nw6"/>
+                            <constraint firstAttribute="trailing" secondItem="tI5-ji-38g" secondAttribute="trailing" id="hdR-aP-gZl"/>
+                            <constraint firstAttribute="bottom" secondItem="168-aa-MvK" secondAttribute="bottom" constant="8" id="iv3-on-f29"/>
+                            <constraint firstItem="tI5-ji-38g" firstAttribute="top" secondItem="CwD-1h-m2f" secondAttribute="top" id="jgb-fX-ovB"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="jqb-68-pGM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="2hv-gs-ASw"/>
+                <constraint firstItem="CwD-1h-m2f" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="6L7-EA-Bmf"/>
+                <constraint firstAttribute="bottom" secondItem="CwD-1h-m2f" secondAttribute="bottom" id="EyR-AU-4Ey"/>
+                <constraint firstItem="CwD-1h-m2f" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="PhD-F3-f3Z"/>
+                <constraint firstItem="jqb-68-pGM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Y2u-RK-o7k"/>
+                <constraint firstAttribute="trailing" secondItem="CwD-1h-m2f" secondAttribute="trailing" id="afL-GF-HNe"/>
+                <constraint firstAttribute="trailing" secondItem="jqb-68-pGM" secondAttribute="trailing" id="hiF-gW-dfT"/>
+                <constraint firstAttribute="bottom" secondItem="jqb-68-pGM" secondAttribute="bottom" id="xbJ-4S-WHZ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="124" height="77"/>
+            <connections>
+                <outlet property="imageView" destination="jqb-68-pGM" id="Yqx-5j-YV7"/>
+                <outlet property="selectionView" destination="CwD-1h-m2f" id="f2B-qn-3fH"/>
+            </connections>
+            <point key="canvasLocation" x="101.44927536231884" y="43.861607142857139"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="checkmark" width="24" height="24"/>
+    </resources>
+</document>
