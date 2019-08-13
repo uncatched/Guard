@@ -36,6 +36,11 @@ final class ArchiveViewController: UICollectionViewController {
 extension ArchiveViewController {
     
     @IBAction private func onAddButton() {
+        guard DefaultsManager.isPremium else {
+            showPremiumAlert()
+            return
+        }
+        
         guard let imagePickerController = storyboard?.instantiateViewController(withIdentifier: "ImagePickerController") as? ImagePickerController else {
             return
         }
@@ -92,6 +97,15 @@ extension ArchiveViewController: UICollectionViewDelegateFlowLayout {
         let detailsViewController = storyboard?.instantiateViewController(withIdentifier: "ZipDetailsViewController") as! ZipDetailsViewController
         detailsViewController.zip = zip
         navigationController?.pushViewController(detailsViewController, animated: true)
+    }
+    
+    func showPremiumAlert() {
+        let premiumStoryboard = UIStoryboard(name: "Premium", bundle: nil)
+        guard let premiumNavigationController = premiumStoryboard.instantiateInitialViewController() else {
+            return
+        }
+        
+        present(premiumNavigationController, animated: true, completion: nil)
     }
 }
 

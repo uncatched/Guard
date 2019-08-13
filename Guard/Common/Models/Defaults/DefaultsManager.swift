@@ -19,6 +19,14 @@ final class DefaultsManager {
     // MARK: - Properties
     static let shared = DefaultsManager()
     
+    static var isPremium: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: "isPremium")
+        } set {
+            UserDefaults.standard.set(newValue, forKey: "isPremium")
+        }
+    }
+    
     var deleteMediaRule: DeleteMediaRule {
         get {
             let raw = UserDefaults.standard.integer(forKey: Keys.deleteMediaRuleKey.rawValue)

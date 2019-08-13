@@ -45,7 +45,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="yQx-L4-jJz">
                             <color key="tintColor" red="0.14901960780000001" green="0.4039215686" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="8TS-OE-05p" kind="show" id="Z2d-gb-50e"/>
+                                <action selector="onAddButton" destination="hkL-OT-Isz" id="JoB-Jv-jK9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -58,7 +58,7 @@
         <!--Add Password Table View Controller-->
         <scene sceneID="VIu-h5-a26">
             <objects>
-                <tableViewController id="8TS-OE-05p" customClass="AddPasswordTableViewController" customModule="Guard" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="AddPasswordTableViewController" id="8TS-OE-05p" customClass="AddPasswordTableViewController" customModule="Guard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="1QU-XR-mEC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

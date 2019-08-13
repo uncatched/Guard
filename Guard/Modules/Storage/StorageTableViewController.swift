@@ -23,6 +23,36 @@ final class StorageTableViewController: UITableViewController {
     }
 }
 
+// MARK: - Actions
+extension StorageTableViewController {
+    
+    @IBAction private func onAddButton() {
+        guard DefaultsManager.isPremium || data.count < 3 else {
+            showPremiumAlert()
+            return
+        }
+        
+        guard let viewController = storyboard?.instantiateViewController(withIdentifier: "AddPasswordTableViewController") else {
+            return
+        }
+        
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+// MARK: - Private methods
+extension StorageTableViewController {
+    
+    private func showPremiumAlert() {
+        let premiumStoryboard = UIStoryboard(name: "Premium", bundle: nil)
+        guard let premiumNavigationController = premiumStoryboard.instantiateInitialViewController() else {
+            return
+        }
+        
+        present(premiumNavigationController, animated: true, completion: nil)
+    }
+}
+
 // MARK: - UITableViewDelegate/DataSource
 extension StorageTableViewController {
     
