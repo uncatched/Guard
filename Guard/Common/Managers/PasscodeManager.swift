@@ -28,9 +28,22 @@ final class PasscodeManager {
 extension PasscodeManager {
     
     func evaluate() {
-        context.evaluatePolicy(.deviceOwnerAuthentication,
-                               localizedReason: reason,
-                               reply: replyHandler)
+        guard DefaultsManager.isPremium else {
+            onSuccess?()
+            return
+        }
+        
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) {
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics,
+                                   localizedReason: reason,
+                                   reply: replyHandler)
+        } else if context.canEvaluatePolicy(.deviceOwnerAuthentication, error: nil) {
+            context.evaluatePolicy(.deviceOwnerAuthentication,
+                                   localizedReason: reason,
+                                   reply: replyHandler)
+        } else {
+            onSuccess?()
+        }
     }
 }
 

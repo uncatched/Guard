@@ -56,7 +56,7 @@ extension SettingsTableViewController {
     
     private func configure() {
         mediaTextField.text = DefaultsManager.shared.deleteMediaRule.shortTitle
-        duplicatesSwitch.isOn = DefaultsManager.shared.removeDuplicates
+//        duplicatesSwitch.isOn = DefaultsManager.shared.removeDuplicates
     }
 }
 
@@ -64,7 +64,7 @@ extension SettingsTableViewController {
 extension SettingsTableViewController {
     
     @IBAction private func onDuplicatesSwitch(_ sender: Any) {
-        DefaultsManager.shared.removeDuplicates = duplicatesSwitch.isOn
+//        DefaultsManager.shared.removeDuplicates = duplicatesSwitch.isOn
     }
 }
 
