@@ -31,6 +31,20 @@ final class SystemInfoTableViewController: UITableViewController {
         
         configureLabels()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        guard DefaultsManager.isSecondLaunch,
+            !DefaultsManager.isPremium,
+            !DefaultsManager.isPremiumShown else {
+            DefaultsManager.isSecondLaunch = true
+            return
+        }
+        
+        DefaultsManager.isPremiumShown = true
+        showPremiumAlert()
+    }
 }
 
 // MARK: - UITableViewDelegate
@@ -151,5 +165,14 @@ extension SystemInfoTableViewController {
     private func copy(text: String) {
         UIPasteboard.general.string = text
         showToast(message: "Copied")
+    }
+    
+    private func showPremiumAlert() {
+        let premiumStoryboard = UIStoryboard(name: "Premium", bundle: nil)
+        guard let premiumNavigationController = premiumStoryboard.instantiateInitialViewController() else {
+            return
+        }
+        
+        present(premiumNavigationController, animated: true, completion: nil)
     }
 }

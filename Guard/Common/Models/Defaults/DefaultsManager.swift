@@ -13,6 +13,9 @@ final class DefaultsManager {
     // MARK: - Keys
     enum Keys: String {
         case deleteMediaRuleKey
+        case isPremium
+        case isPremiumShown
+        case isSecondLaunch
     }
     
     // MARK: - Properties
@@ -20,9 +23,25 @@ final class DefaultsManager {
     
     static var isPremium: Bool {
         get {
-            return UserDefaults.standard.bool(forKey: "isPremium")
+            return UserDefaults.standard.bool(forKey: Keys.isPremium.rawValue)
         } set {
-            UserDefaults.standard.set(newValue, forKey: "isPremium")
+            UserDefaults.standard.set(newValue, forKey: Keys.isPremium.rawValue)
+        }
+    }
+    
+    static var isPremiumShown: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: Keys.isPremiumShown.rawValue)
+        } set {
+            UserDefaults.standard.set(newValue, forKey: Keys.isPremiumShown.rawValue)
+        }
+    }
+    
+    static var isSecondLaunch: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: Keys.isSecondLaunch.rawValue)
+        } set {
+            UserDefaults.standard.set(newValue, forKey: Keys.isSecondLaunch.rawValue)
         }
     }
     
