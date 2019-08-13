@@ -379,13 +379,7 @@
                             <outlet property="delegate" destination="QZm-y8-P0h" id="kEG-2S-dpi"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Device info" id="EQ9-3u-zdI">
-                        <barButtonItem key="rightBarButtonItem" image="settings" id="LY4-bj-j17">
-                            <connections>
-                                <segue destination="KuO-Q9-Qat" kind="show" id="6R2-aY-nn3"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Device info" id="EQ9-3u-zdI"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="availableLabel" destination="jtd-S3-k0c" id="j4m-VX-ZLk"/>
@@ -406,14 +400,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Moz-s2-fr2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1290" y="-157"/>
-        </scene>
-        <!--Settings-->
-        <scene sceneID="UaI-rX-6ry">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Settings" id="KuO-Q9-Qat" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FQh-0k-ZPY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2083" y="-157"/>
         </scene>
         <!--Info-->
         <scene sceneID="qDQ-nx-SED">
@@ -437,6 +423,5 @@
     </scenes>
     <resources>
         <image name="info" width="24" height="24"/>
-        <image name="settings" width="24" height="24"/>
     </resources>
 </document>

@@ -13,7 +13,6 @@ final class DefaultsManager {
     // MARK: - Keys
     enum Keys: String {
         case deleteMediaRuleKey
-        case removeDuplicates
     }
     
     // MARK: - Properties
@@ -35,16 +34,6 @@ final class DefaultsManager {
         
         set {
             UserDefaults.standard.set(newValue.rawValue, forKey: Keys.deleteMediaRuleKey.rawValue)
-        }
-    }
-    
-    var removeDuplicates: Bool {
-        get {
-            return UserDefaults.standard.bool(forKey: Keys.removeDuplicates.rawValue)
-        }
-        
-        set {
-            UserDefaults.standard.set(newValue, forKey: Keys.removeDuplicates.rawValue)
         }
     }
 }

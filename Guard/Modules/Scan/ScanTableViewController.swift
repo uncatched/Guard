@@ -32,10 +32,12 @@ final class ScanTableViewController: UITableViewController {
     @IBOutlet weak var videoActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var audioActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var removeButton: UIButton!
+    @IBOutlet weak var removeMediaButton: UIButton!
     
     // MARK: - Properties
     private let store = CNContactStore()
     private var result = ScanResult()
+    private var media: DeleteMediaType?
     private var duplicates: [String] = []
     
     // MARK: - Life Cycle
@@ -43,12 +45,6 @@ final class ScanTableViewController: UITableViewController {
         super.viewDidLoad()
         
         refresh()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        removeButton.isHidden = DefaultsManager.shared.removeDuplicates
     }
 }
 
@@ -82,10 +78,6 @@ extension ScanTableViewController {
                     self.videoCountLabel.isHidden = false
                     self.audioCountLabel.isHidden = false
                     self.configureLibraryLabels(self.result)
-                    
-                    if DefaultsManager.shared.removeDuplicates {
-                        self.cleanDuplicates()
-                    }
                 }
             }
         }
@@ -203,22 +195,14 @@ extension ScanTableViewController {
         result.video = video.count
         result.audio = audio.count
         
-        let data: DeleteMediaType = (photo: photo, video: video, audio: audio, completion: completion)
-        switch DefaultsManager.shared.deleteMediaRule {
-        case .sixMonths:
-            deleteMediaAfterSixMonths(data: data)
-        case .oneYear:
-            deleteMediaAfterOneYear(data: data)
-        case .twoYears:
-            deleteMediaAfterTwoYears(data:  data)
-        default:
-            completion()
-        }
+        media = (photo: photo, video: video, audio: audio)
+        completion()
     }
     
     private func configureContactLabels(_ result: ScanResult) {
         totalCountLabel.text = String(result.contacts)
         duplicatesCountLabel.text = String(result.copies)
+        removeButton.isEnabled = result.copies > 0
     }
     
     private func configureLibraryLabels(_ result: ScanResult) {
@@ -267,7 +251,7 @@ extension ScanTableViewController {
         }
     }
     
-    typealias DeleteMediaType = (photo: PHFetchResult<PHAsset>, video: PHFetchResult<PHAsset>, audio: PHFetchResult<PHAsset>, completion: () -> Void)
+    typealias DeleteMediaType = (photo: PHFetchResult<PHAsset>, video: PHFetchResult<PHAsset>, audio: PHFetchResult<PHAsset>)
     
     private func deleteMediaAfterSixMonths(data: DeleteMediaType) {
         var photos: [PHAsset] = []
@@ -306,7 +290,9 @@ extension ScanTableViewController {
             self.result.photo -= photos.count
             self.result.video -= video.count
             self.result.audio -= audio.count
-            data.completion()
+            DispatchQueue.main.async {
+                self.refresh()
+            }
         }
     }
     
@@ -347,7 +333,9 @@ extension ScanTableViewController {
             self.result.photo -= photos.count
             self.result.video -= video.count
             self.result.audio -= audio.count
-            data.completion()
+            DispatchQueue.main.async {
+                self.refresh()
+            }
         }
     }
     
@@ -388,7 +376,9 @@ extension ScanTableViewController {
             self.result.photo -= photos.count
             self.result.video -= video.count
             self.result.audio -= audio.count
-            data.completion()
+            DispatchQueue.main.async {
+                self.refresh()
+            }
         }
     }
     
@@ -430,5 +420,36 @@ extension ScanTableViewController {
     
     @IBAction private func onRemoveContactsButton() {
         cleanDuplicates()
+    }
+    
+    @IBAction private func onRemoveMediaButton() {
+        let alertController = UIAlertController(title: "Delete media older than...", message: nil, preferredStyle: .actionSheet)
+        alertController.addAction(UIAlertAction(title: "Six months", style: .default, handler: { [unowned self] _ in
+            guard let data = self.media else {
+                return
+            }
+            
+            self.deleteMediaAfterSixMonths(data: data)
+        }))
+        
+        alertController.addAction(UIAlertAction(title: "One year", style: .default, handler: { [unowned self] _ in
+            guard let data = self.media else {
+                return
+            }
+            
+            self.deleteMediaAfterOneYear(data: data)
+        }))
+        
+        alertController.addAction(UIAlertAction(title: "Two years", style: .default, handler: { [unowned self] _ in
+            guard let data = self.media else {
+                return
+            }
+            
+            self.deleteMediaAfterTwoYears(data: data)
+        }))
+        
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        
+        present(alertController, animated: true, completion: nil)
     }
 }

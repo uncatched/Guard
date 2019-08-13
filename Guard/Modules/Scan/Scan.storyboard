@@ -13,20 +13,10 @@
         <scene sceneID="c0m-4K-060">
             <objects>
                 <tableViewController id="z6k-Ko-cFO" customClass="ScanTableViewController" customModule="Guard" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="l3c-Xy-bDu">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="l3c-Xy-bDu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="E05-Bn-FSO">
-                            <rect key="frame" x="0.0" y="349.5" width="414" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Remove duplicated contacts">
-                                <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </state>
-                            <connections>
-                                <action selector="onRemoveContactsButton" destination="z6k-Ko-cFO" eventType="touchUpInside" id="pio-xi-oFE"/>
-                            </connections>
-                        </button>
                         <sections>
                             <tableViewSection headerTitle="Contacts" id="QPb-zL-LxJ">
                                 <cells>
@@ -100,12 +90,40 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="60" id="y5X-1k-BXv">
+                                        <rect key="frame" x="0.0" y="143.5" width="414" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y5X-1k-BXv" id="DGG-J0-D4v">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZI-gz-Uk6">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="59.5"/>
+                                                    <state key="normal" title="Remove duplicated contacts">
+                                                        <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <state key="disabled">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.2274554581447964" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="onRemoveContactsButton" destination="z6k-Ko-cFO" eventType="touchUpInside" id="szD-ME-AcW"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="nZI-gz-Uk6" secondAttribute="bottom" id="eQA-Gt-FEL"/>
+                                                <constraint firstItem="nZI-gz-Uk6" firstAttribute="top" secondItem="DGG-J0-D4v" secondAttribute="top" id="fBr-02-avn"/>
+                                                <constraint firstItem="nZI-gz-Uk6" firstAttribute="leading" secondItem="DGG-J0-D4v" secondAttribute="leading" id="nIW-qL-nBh"/>
+                                                <constraint firstAttribute="trailing" secondItem="nZI-gz-Uk6" secondAttribute="trailing" id="wny-dw-IfS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Library" id="bdU-VR-vwh">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="tVL-g6-lQx">
-                                        <rect key="frame" x="0.0" y="199.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="259.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tVL-g6-lQx" id="Mwa-OE-qHx">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -140,7 +158,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="R6m-eK-YJL">
-                                        <rect key="frame" x="0.0" y="243.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="303.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R6m-eK-YJL" id="wVt-dd-eHh">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -175,7 +193,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Hc4-uH-tAK">
-                                        <rect key="frame" x="0.0" y="287.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="347.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hc4-uH-tAK" id="Zcd-7h-mQK">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -209,6 +227,34 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="60" id="jQB-Uk-RBx">
+                                        <rect key="frame" x="0.0" y="391.5" width="414" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jQB-Uk-RBx" id="kT4-bn-ib6">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rjD-Dw-6GX">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="59.5"/>
+                                                    <state key="normal" title="Remove media older than...">
+                                                        <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <state key="disabled">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.22745545810000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="onRemoveMediaButton" destination="z6k-Ko-cFO" eventType="touchUpInside" id="kYA-1M-RcL"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rjD-Dw-6GX" firstAttribute="top" secondItem="kT4-bn-ib6" secondAttribute="top" id="HMh-Jy-oVZ"/>
+                                                <constraint firstItem="rjD-Dw-6GX" firstAttribute="leading" secondItem="kT4-bn-ib6" secondAttribute="leading" id="KD3-bU-o8V"/>
+                                                <constraint firstAttribute="trailing" secondItem="rjD-Dw-6GX" secondAttribute="trailing" id="lii-78-ATz"/>
+                                                <constraint firstAttribute="bottom" secondItem="rjD-Dw-6GX" secondAttribute="bottom" id="osC-Lk-OaW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -232,7 +278,7 @@
                         <outlet property="duplicatesCountLabel" destination="UTu-kl-u29" id="kKw-IP-RwR"/>
                         <outlet property="photoActivityIndicator" destination="u29-Ov-wmR" id="SAB-34-JCS"/>
                         <outlet property="photoCountLabel" destination="Gi7-Yn-Jui" id="ybT-I0-nFz"/>
-                        <outlet property="removeButton" destination="E05-Bn-FSO" id="Koh-0i-V0Z"/>
+                        <outlet property="removeButton" destination="nZI-gz-Uk6" id="peV-5y-vuJ"/>
                         <outlet property="totalActivityIndicator" destination="B4T-Kh-bJm" id="d3a-g8-UuB"/>
                         <outlet property="totalCountLabel" destination="szr-sv-3k2" id="ELf-DS-oAg"/>
                         <outlet property="videoActivityIndicator" destination="r4E-J4-pg3" id="6tm-de-bQA"/>
