@@ -11,7 +11,13 @@ import UIKit
 final class StorageTableViewController: UITableViewController {
     
     // MARK: - Properties
-    private var data: [StorageData]!
+    private var data: [StorageData]! {
+        didSet {
+            emptyView.isHidden = !data.isEmpty
+        }
+    }
+    private var emptyLabel: UILabel!
+    @IBOutlet private weak var emptyView: UIView!
     
     // MARK: - Life Cycle
     override func viewWillAppear(_ animated: Bool) {
@@ -20,6 +26,15 @@ final class StorageTableViewController: UITableViewController {
         data = StorageManager.data
         
         tableView.reloadData()
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+
+        let navigationBarHeight: CGFloat = navigationController?.navigationBar.bounds.height ?? 0.0
+        let tabBarHeight: CGFloat = tabBarController?.tabBar.bounds.height ?? 0.0
+        let height = tableView.bounds.size.height - (navigationBarHeight + tabBarHeight)
+        emptyView.frame = CGRect(origin: .zero, size: CGSize(width: tableView.bounds.size.width, height: height))
     }
 }
 
@@ -56,10 +71,6 @@ extension StorageTableViewController {
 // MARK: - UITableViewDelegate/DataSource
 extension StorageTableViewController {
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
@@ -76,6 +87,10 @@ extension StorageTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        guard data.count > 0 else {
+            return .none
+        }
+        
         return .delete
     }
     

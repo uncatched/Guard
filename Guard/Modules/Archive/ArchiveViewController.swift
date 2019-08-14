@@ -15,6 +15,8 @@ final class ArchiveViewController: UICollectionViewController {
     private var archives: [ZipFile] = [] {
         didSet {
             state = archives.count == 0 ? .empty : .withData
+            collectionView.isScrollEnabled = state == .withData
+            collectionView.backgroundColor = state == .withData ? .white : .groupTableViewBackground
             collectionView.reloadData()
         }
     }
@@ -78,7 +80,10 @@ extension ArchiveViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch state {
         case .empty:
-            return collectionView.bounds.size
+            let navigationBarHeight: CGFloat = navigationController?.navigationBar.bounds.height ?? 0.0
+            let tabBarHeight: CGFloat = tabBarController?.tabBar.bounds.height ?? 0.0
+            return CGSize(width: collectionView.bounds.size.width,
+                          height: collectionView.bounds.size.height - (navigationBarHeight + tabBarHeight))
         case .withData:
             return CGSize(width: collectionView.bounds.width/3, height: collectionView.bounds.width/3)
         }
@@ -93,6 +98,10 @@ extension ArchiveViewController: UICollectionViewDelegateFlowLayout {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard state == .withData else {
+            return
+        }
+        
         let zip = archives[indexPath.row]
         let detailsViewController = storyboard?.instantiateViewController(withIdentifier: "ZipDetailsViewController") as! ZipDetailsViewController
         detailsViewController.zip = zip
