@@ -31,7 +31,10 @@ final class StorageTableViewController: UITableViewController {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
 
-        emptyView.frame = tableView.bounds
+        let navigationBarHeight: CGFloat = navigationController?.navigationBar.bounds.height ?? 0.0
+        let tabBarHeight: CGFloat = tabBarController?.tabBar.bounds.height ?? 0.0
+        let height = tableView.bounds.size.height - (navigationBarHeight + tabBarHeight)
+        emptyView.frame = CGRect(origin: .zero, size: CGSize(width: tableView.bounds.size.width, height: height))
     }
 }
 
