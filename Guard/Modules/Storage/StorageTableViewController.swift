@@ -12,13 +12,15 @@ final class StorageTableViewController: UITableViewController {
     
     // MARK: - Properties
     private var data: [StorageData]!
+    private var emptyLabel: UILabel!
     
     // MARK: - Life Cycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     
         data = StorageManager.data
-        
+        tableView.isScrollEnabled = !data.isEmpty
+        tableView.separatorStyle = !data.isEmpty ? .singleLine : .none
         tableView.reloadData()
     }
 }
@@ -61,21 +63,44 @@ extension StorageTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return data.count == 0 ? 1 : data.count
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if data.count == 0 {
+            let navigationBarHeight: CGFloat = navigationController?.navigationBar.bounds.height ?? 0.0
+            let tabBarHeight: CGFloat = tabBarController?.tabBar.bounds.height ?? 0.0
+            return tableView.bounds.size.height - (navigationBarHeight + tabBarHeight + 35)
+        } else {
+            return 50
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "StorageCell") else {
-            return UITableViewCell()
+        if data.count == 0 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "EmptyStorageCell") else {
+                return UITableViewCell()
+            }
+            cell.selectionStyle = .none
+            
+            return cell
+        } else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "StorageCell") else {
+                return UITableViewCell()
+            }
+            
+            let item = data[indexPath.row]
+            cell.textLabel?.text = item.title ?? "Item"
+            
+            return cell
         }
-        
-        let item = data[indexPath.row]
-        cell.textLabel?.text = item.title ?? "Item"
-        
-        return cell
     }
     
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        guard data.count > 0 else {
+            return .none
+        }
+        
         return .delete
     }
     
@@ -87,6 +112,10 @@ extension StorageTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard data.count > 0 else {
+            return
+        }
+        
         let item = data[indexPath.row]
         guard let detailsViewController = storyboard?.instantiateViewController(withIdentifier: "PasswordDetailsViewController") as? PasswordDetailsViewController else {
             return
