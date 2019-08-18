@@ -16,7 +16,7 @@ extension Notification.Name {
 final class PremiumManager {
     
     static let shared = PremiumManager()
-    private let helper = IAPHelper(productIds: ["com.proxy.premium.month"])
+    private let helper = IAPHelper(productIds: ["com.guard.premium.month"])
     
     init() {
         NotificationCenter.default.addObserver(self, selector: #selector(onPurchaseNotification), name: .IAPHelperPurchaseNotification, object: nil)
