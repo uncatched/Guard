@@ -36,6 +36,7 @@ extension PremiumViewController {
     private func setupTableView() {
         tableView.register(UINib(nibName: "SubscriptionDetailsCell", bundle: nil), forCellReuseIdentifier: "SubscriptionDetailsCell")
         tableView.register(UINib(nibName: "PremiumBuyCell", bundle: nil), forCellReuseIdentifier: "PremiumBuyCell")
+        tableView.register(UINib(nibName: "PremiumTermsCell", bundle: nil), forCellReuseIdentifier: "PremiumTermsCell")
     }
     
     private func setupRestoreButton() {
@@ -76,7 +77,7 @@ extension PremiumViewController {
 extension PremiumViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -95,6 +96,9 @@ extension PremiumViewController: UITableViewDelegate, UITableViewDataSource {
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "PremiumBuyCell") as! PremiumBuyCell
             cell.buyButton.addTarget(self, action: #selector(onBuyButton), for: .touchUpInside)
+            return cell
+        case 2:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PremiumTermsCell")!
             return cell
         default:
             return UITableViewCell()
