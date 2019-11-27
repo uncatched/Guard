@@ -168,10 +168,7 @@
 		9213F17A2301A9A10002023F /* Premium */ = {
 			isa = PBXGroup;
 			children = (
-				9213F17B2301A9A10002023F /* PremiumBuyCell.xib */,
-				9213F17C2301A9A10002023F /* SubscriptionDetailsCell.xib */,
-				9213F17D2301A9A10002023F /* SubscriptionDetailsCell.swift */,
-				9213F17E2301A9A10002023F /* PremiumBuyCell.swift */,
+				92ACCC60237929BE007F327D /* Views */,
 				9213F17F2301A9A10002023F /* Premium.storyboard */,
 				9213F1802301A9A10002023F /* PremiumViewController.swift */,
 				92830DA1230D135E0042DEDF /* PremiumTermsCell.swift */,
@@ -392,6 +389,17 @@
 				9244865222CE005500233499 /* Storage */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		92ACCC60237929BE007F327D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9213F17B2301A9A10002023F /* PremiumBuyCell.xib */,
+				9213F17E2301A9A10002023F /* PremiumBuyCell.swift */,
+				9213F17C2301A9A10002023F /* SubscriptionDetailsCell.xib */,
+				9213F17D2301A9A10002023F /* SubscriptionDetailsCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		92C573B222C26BC800A9B424 /* Common */ = {
