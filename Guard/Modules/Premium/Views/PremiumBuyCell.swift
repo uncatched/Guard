@@ -11,7 +11,7 @@ import UIKit
 final class PremiumBuyCell: UITableViewCell {
 
     // MARK: - Outlets
-    @IBOutlet private weak var buyButton: UIButton!
+    @IBOutlet private(set) weak var buyButton: UIButton!
     @IBOutlet private weak var protectLabel: UILabel!
     @IBOutlet private weak var trialLabel: UILabel!
     @IBOutlet private weak var monthLabel: UILabel!
