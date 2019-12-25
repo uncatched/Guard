@@ -15,11 +15,11 @@ class PremiumTermsCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        let terms = "Terms of Service"
+        let terms = NSLocalizedString("premium_label_termsOfService", comment: "")
         let termsURL = URL(string: "https://uncatched.github.io/Guard-ToS/")!
-        let privacy = "Privacy Policy"
+        let privacy = NSLocalizedString("premium_label_privacyPolicy", comment: "")
         let privacyURL = URL(string: "https://uncatched.github.io/Guard-Policy/")!
-        let text: NSString = "By upgrading your account, you agree to the Terms of Service and Privacy Policy"
+        let text: NSString = NSLocalizedString("premium_label_terms_and_privacy", comment: "") as NSString
         let termsRange = text.range(of: terms)
         let privacyRange = text.range(of: privacy)
         

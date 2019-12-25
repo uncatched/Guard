@@ -164,7 +164,7 @@ extension SystemInfoTableViewController {
     
     private func copy(text: String) {
         UIPasteboard.general.string = text
-        showToast(message: "Copied")
+        showToast(message: NSLocalizedString("systemInfo_label_copied", comment: ""))
     }
     
     private func showPremiumAlert() {

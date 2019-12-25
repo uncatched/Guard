@@ -28,10 +28,10 @@ final class PremiumBuyCell: UITableViewCell {
 extension PremiumBuyCell {
     
     private func setupSubviews() {
-        protectLabel.text = "Protect your iPhone"
-        trialLabel.text = "Start your 7-day free trial"
-        monthLabel.text = "Then $9.99 per month"
-        buyButton.setTitle("Try free for 7 days", for: .normal)
+        protectLabel.text = NSLocalizedString("premium_label_protectYourPhone", comment: "")
+        trialLabel.text = NSLocalizedString("premium_label_startFreeTrial", comment: "")
+        monthLabel.text = NSLocalizedString("premium_label_thenPerMonth", comment: "")
+        buyButton.setTitle(NSLocalizedString("premium_button_tryFree", comment: ""), for: .normal)
         buyButton.layer.cornerRadius = 4.0
     }
 }

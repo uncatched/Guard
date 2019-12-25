@@ -13,10 +13,10 @@
 "premium_label_startFreeTrial" = "Начните 7-дневную бесплатную пробную версию";
 
 /* loco:5dc8f22ded0cfa46ec4bb842 */
-"premium_label_thenPerMonth" = "Тогда $ 9.99 в месяц";
+"premium_label_thenPerMonth" = "Потом $ 9.99 в месяц";
 
 /* loco:5dc8f240ed0cfa46ba799ce9 */
-"premium_button_tryFree" = "\n19/5000\nПопробуйте бесплатно в течение 7 дней";
+"premium_button_tryFree" = "Попробуйте бесплатно в течение 7 дней";
 
 /* loco:5dc8f35ced0cfa46b83fd8f6 */
 "premium_label_freeTrial" = "Бесплатная 7-дневная пробная версия";
@@ -62,3 +62,54 @@
 
 /* loco:5dc8f4aeed0cfa46ba799cee */
 "premium_label_privacyPolicy" = "Политика Конфиденциальности";
+
+/* loco:5dde480aed0cfa7a101eba23 */
+"media_label_deleteAll" = "Все";
+
+/* loco:5dde482bed0cfa79d85b0b52 */
+"media_label_removeSIxMonths" = "Удалить старше шести месяцев";
+
+/* loco:5dde4842ed0cfa79f81a0974 */
+"media_label_removeOneYear" = "Удалить старше одного года";
+
+/* loco:5dde486ced0cfa7a417de402 */
+"media_label_removeTwoYears" = "Удалить старше двух лет";
+
+/* loco:5dde48b1ed0cfa7a5b617a02 */
+"media_label_removeAllShort" = "Все";
+
+/* loco:5dde4917ed0cfa7a7b5fba92 */
+"media_label_removeSixMonthsShort" = "6 месяцев";
+
+/* loco:5dde492eed0cfa7a79272272 */
+"media_label_removeOneYearShort" = "1 год";
+
+/* loco:5dde494ced0cfa7a5e519de2 */
+"media_label_removeTwoYearsShort" = "2 года";
+
+/* loco:5dde5a3ced0cfa7f351d1572 */
+"launch_label_authToProceed" = "Пожалуйста, авторизуйтесь, чтобы продолжить";
+
+/* loco:5dde5aeced0cfa7fef613986 */
+"systemInfo_label_copied" = "Скопирован";
+
+/* loco:5dde5b57ed0cfa0206320382 */
+"scan_label_deleteMedia" = "Удалить медиа старше ...";
+
+/* loco:5dde5bd6ed0cfa01a92a7856 */
+"scan_label_sixMonth" = "Шесть месяцев";
+
+/* loco:5dde5be2ed0cfa0206320387 */
+"scan_label_oneYear" = "Один год";
+
+/* loco:5dde5bf6ed0cfa01e5670284 */
+"scan_label_twoYears" = "Два года";
+
+/* loco:5dde5ce8ed0cfa02503b6712 */
+"password_label_copied" = "Скопирован";
+
+/* loco:5dde5d6ced0cfa02077f4f63 */
+"imagePicker_label_enterFileName" = "Введите имя файла";
+
+/* loco:5dde5d84ed0cfa026b5d4cc2 */
+"imagePicker_placeholder_name" = "Имя";

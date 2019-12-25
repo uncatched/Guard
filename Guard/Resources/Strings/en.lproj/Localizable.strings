@@ -62,3 +62,54 @@
 
 /* loco:5dc8f4aeed0cfa46ba799cee */
 "premium_label_privacyPolicy" = "Privacy Policy";
+
+/* loco:5dde480aed0cfa7a101eba23 */
+"media_label_deleteAll" = "All";
+
+/* loco:5dde482bed0cfa79d85b0b52 */
+"media_label_removeSIxMonths" = "Remove older than 6 months";
+
+/* loco:5dde4842ed0cfa79f81a0974 */
+"media_label_removeOneYear" = "Remove older than 1 year";
+
+/* loco:5dde486ced0cfa7a417de402 */
+"media_label_removeTwoYears" = "Remove older than 2 years";
+
+/* loco:5dde48b1ed0cfa7a5b617a02 */
+"media_label_removeAllShort" = "All";
+
+/* loco:5dde4917ed0cfa7a7b5fba92 */
+"media_label_removeSixMonthsShort" = "6 months";
+
+/* loco:5dde492eed0cfa7a79272272 */
+"media_label_removeOneYearShort" = "1 year";
+
+/* loco:5dde494ced0cfa7a5e519de2 */
+"media_label_removeTwoYearsShort" = "2 years";
+
+/* loco:5dde5a3ced0cfa7f351d1572 */
+"launch_label_authToProceed" = "Please authenticate to proceed";
+
+/* loco:5dde5aeced0cfa7fef613986 */
+"systemInfo_label_copied" = "Copied";
+
+/* loco:5dde5b57ed0cfa0206320382 */
+"scan_label_deleteMedia" = "Delete media older than...";
+
+/* loco:5dde5bd6ed0cfa01a92a7856 */
+"scan_label_sixMonth" = "Six months";
+
+/* loco:5dde5be2ed0cfa0206320387 */
+"scan_label_oneYear" = "One year";
+
+/* loco:5dde5bf6ed0cfa01e5670284 */
+"scan_label_twoYears" = "Two years";
+
+/* loco:5dde5ce8ed0cfa02503b6712 */
+"password_label_copied" = "Copied";
+
+/* loco:5dde5d6ced0cfa02077f4f63 */
+"imagePicker_label_enterFileName" = "Enter a file name";
+
+/* loco:5dde5d84ed0cfa026b5d4cc2 */
+"imagePicker_placeholder_name" = "Name";

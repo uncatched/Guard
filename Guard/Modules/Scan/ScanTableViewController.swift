@@ -423,8 +423,10 @@ extension ScanTableViewController {
     }
     
     @IBAction private func onRemoveMediaButton() {
-        let alertController = UIAlertController(title: "Delete media older than...", message: nil, preferredStyle: .actionSheet)
-        alertController.addAction(UIAlertAction(title: "Six months", style: .default, handler: { [unowned self] _ in
+        let alertController = UIAlertController(title: NSLocalizedString("scan_label_deleteMedia", comment: ""),
+                                                message: nil,
+                                                preferredStyle: .actionSheet)
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("scan_label_sixMonth", comment: ""), style: .default, handler: { [unowned self] _ in
             guard let data = self.media else {
                 return
             }
@@ -432,7 +434,7 @@ extension ScanTableViewController {
             self.deleteMediaAfterSixMonths(data: data)
         }))
         
-        alertController.addAction(UIAlertAction(title: "One year", style: .default, handler: { [unowned self] _ in
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("scan_label_oneYear", comment: ""), style: .default, handler: { [unowned self] _ in
             guard let data = self.media else {
                 return
             }
@@ -440,7 +442,7 @@ extension ScanTableViewController {
             self.deleteMediaAfterOneYear(data: data)
         }))
         
-        alertController.addAction(UIAlertAction(title: "Two years", style: .default, handler: { [unowned self] _ in
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("scan_label_twoYears", comment: ""), style: .default, handler: { [unowned self] _ in
             guard let data = self.media else {
                 return
             }
@@ -448,7 +450,7 @@ extension ScanTableViewController {
             self.deleteMediaAfterTwoYears(data: data)
         }))
         
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("general_button_cancel", comment: ""), style: .cancel))
         
         present(alertController, animated: true, completion: nil)
     }

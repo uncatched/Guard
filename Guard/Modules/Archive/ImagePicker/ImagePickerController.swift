@@ -162,17 +162,17 @@ extension ImagePickerController {
     }
     
     private func presentFilenameAlert() {
-        let alertController = UIAlertController(title: "Enter a file name", message: nil, preferredStyle: .alert)
+        let alertController = UIAlertController(title: NSLocalizedString("Enter a file name", comment: ""), message: nil, preferredStyle: .alert)
         alertController.addTextField { textfield in
-            textfield.placeholder = "Name"
+            textfield.placeholder = NSLocalizedString("imagePicker_placeholder_name", comment: "")
         }
         
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { [unowned self] _ in
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("general_button_ok", comment: ""), style: .default, handler: { [unowned self] _ in
             let filename = alertController.textFields?.first?.text ?? UUID().uuidString
             self.proceedData(filename: filename)
         }))
         
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { [unowned self] _ in
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("general_button_cancel", comment: ""), style: .cancel, handler: { [unowned self] _ in
             self.dismiss(animated: true, completion: nil)
         }))
         
