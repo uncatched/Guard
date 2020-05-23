@@ -24,6 +24,7 @@ final class ArchiveViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = NSLocalizedString("zip_title_zip", comment: "")
         setupCollectionView()
     }
     
@@ -47,6 +48,7 @@ extension ArchiveViewController {
             return
         }
         
+        imagePickerController.delegate = self
         let navigationController = UINavigationController(rootViewController: imagePickerController)
         present(navigationController, animated: true, completion: nil)
     }
@@ -122,6 +124,14 @@ extension ArchiveViewController: UICollectionViewDelegateFlowLayout {
 extension ArchiveViewController {
     
     private func setupCollectionView() {
+        let view = UIView(frame: collectionView.bounds)
+        if #available(iOS 13.0, *) {
+            view.backgroundColor = .systemGroupedBackground
+        } else {
+            view.backgroundColor = .white
+        }
+        collectionView.backgroundView = view
+        
         collectionView!.register(ArchiveCell.nib, forCellWithReuseIdentifier: ArchiveCell.reuseIdentifier)
         collectionView!.register(ArchiveEmptyCell.nib, forCellWithReuseIdentifier: ArchiveEmptyCell.reuseIdentifier)
     }
@@ -133,5 +143,13 @@ extension ArchiveViewController {
     enum ArchiveViewState {
         case empty
         case withData
+    }
+}
+
+// MARK: - ImagePickerControllerDelegate
+extension ArchiveViewController: ImagePickerControllerDelegate {
+    
+    func imagePickerControllerDidFinishedPicking(_ controller: ImagePickerController) {
+        archives = StorageManager.zipData
     }
 }

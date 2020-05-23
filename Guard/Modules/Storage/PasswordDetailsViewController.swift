@@ -69,7 +69,7 @@ extension PasswordDetailsViewController {
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 14)
         label.textColor = .white
-        label.text = "Copied"
+        label.text = NSLocalizedString("password_label_copied", comment: "")
         toast.addSubview(label)
         
         UIView.animate(withDuration: 1.5, animations: {

@@ -13,8 +13,13 @@ final class ZipDetailsViewController: UITableViewController {
     // MARK: - Outlets
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var createdLabel: UILabel!
+    @IBOutlet private weak var createdTitleLabel: UILabel!
     @IBOutlet private weak var filesLabel: UILabel!
+    @IBOutlet private weak var filesTitleLabel: UILabel!
     @IBOutlet private weak var sizeLabel: UILabel!
+    @IBOutlet private weak var sizeTitleLabel: UILabel!
+    @IBOutlet weak var removeButton: UIButton!
+    
     
     // MARK: - Properties
     var zip: ZipFile!
@@ -23,6 +28,12 @@ final class ZipDetailsViewController: UITableViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        createdTitleLabel.text = NSLocalizedString("zip_label_created", comment: "")
+        filesTitleLabel.text = NSLocalizedString("zip_label_files", comment: "")
+        sizeTitleLabel.text = NSLocalizedString("zip_label_size", comment: "")
+        removeButton.setTitle(NSLocalizedString("zip_label_remove", comment: ""),
+                              for: .normal)
         
         configureView()
     }

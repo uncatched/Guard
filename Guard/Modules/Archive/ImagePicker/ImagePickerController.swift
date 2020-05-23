@@ -8,12 +8,17 @@
 
 import UIKit
 
+protocol ImagePickerControllerDelegate: AnyObject {
+    func imagePickerControllerDidFinishedPicking(_ controller: ImagePickerController)
+}
+
 final class ImagePickerController: UICollectionViewController {
     
     // MARK: - Outlets
     @IBOutlet private weak var doneItem: UIBarButtonItem!
     
     // MARK: - Properties
+    weak var delegate: ImagePickerControllerDelegate?
     private var imagesData: [PhotosManager.ImageData] = []
     private var selectedIndexes: [IndexPath] = [] {
         didSet {
@@ -40,6 +45,8 @@ final class ImagePickerController: UICollectionViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = NSLocalizedString("zip_label_photos", comment: "")
         
         setupCollectionView()
         requestPhotosAuthorization()
@@ -153,6 +160,7 @@ extension ImagePickerController {
                               filesCount: data.count,
                               size: result.size)
             StorageManager.saveZip(zip)
+            delegate?.imagePickerControllerDidFinishedPicking(self)
             dismiss(animated: true, completion: nil)
         } catch {
             print("error")
@@ -162,17 +170,17 @@ extension ImagePickerController {
     }
     
     private func presentFilenameAlert() {
-        let alertController = UIAlertController(title: "Enter a file name", message: nil, preferredStyle: .alert)
+        let alertController = UIAlertController(title: NSLocalizedString("zip_label_enterFileName", comment: ""), message: nil, preferredStyle: .alert)
         alertController.addTextField { textfield in
-            textfield.placeholder = "Name"
+            textfield.placeholder = NSLocalizedString("imagePicker_placeholder_name", comment: "")
         }
         
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { [unowned self] _ in
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("general_button_ok", comment: ""), style: .default, handler: { [unowned self] _ in
             let filename = alertController.textFields?.first?.text ?? UUID().uuidString
             self.proceedData(filename: filename)
         }))
         
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { [unowned self] _ in
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("general_button_cancel", comment: ""), style: .cancel, handler: { [unowned self] _ in
             self.dismiss(animated: true, completion: nil)
         }))
         

@@ -30,7 +30,7 @@ extension PremiumViewController {
     private func setupNavigationBar() {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .always
-        title = "Premium"
+        title = NSLocalizedString("premium_label_premium", comment: "")
     }
     
     private func setupTableView() {
@@ -40,13 +40,13 @@ extension PremiumViewController {
     }
     
     private func setupRestoreButton() {
-        let restoreButton = UIBarButtonItem(title: "Restore", style: .plain, target: self, action: #selector(onRestoreButton))
+        let restoreButton = UIBarButtonItem(title: NSLocalizedString("general_button_restore", comment: ""), style: .plain, target: self, action: #selector(onRestoreButton))
         restoreButton.tintColor = .mainBlue
         navigationItem.rightBarButtonItem = restoreButton
     }
     
     private func setupCancelButton() {
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(onCancelButton))
+        let cancelButton = UIBarButtonItem(title: NSLocalizedString("general_button_cancel", comment: ""), style: .plain, target: self, action: #selector(onCancelButton))
         cancelButton.tintColor = .mainBlue
         navigationItem.leftBarButtonItem = cancelButton
     }
@@ -110,8 +110,10 @@ extension PremiumViewController: UITableViewDelegate, UITableViewDataSource {
 extension PremiumViewController {
     
     @objc func didPurchasePremium() {
-        let alertController = UIAlertController(title: "Congratulations!", message: "You successfully purchased Premium subscription", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default) { [unowned self] _ in
+        let alertController = UIAlertController(title: NSLocalizedString("premium_label_congratulations", comment: ""),
+                                                message: NSLocalizedString("premium_label_premiumPurchased", comment: ""),
+                                                preferredStyle: .alert)
+        let okAction = UIAlertAction(title: NSLocalizedString("general_button_ok", comment: ""), style: .default) { [unowned self] _ in
             self.dismiss(animated: true, completion: nil)
         }
         alertController.addAction(okAction)
@@ -119,8 +121,10 @@ extension PremiumViewController {
     }
     
     @objc func didFailedPurchase() {
-        let alertController = UIAlertController(title: "Error", message: "Something went wrong. Please try again later", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let alertController = UIAlertController(title: NSLocalizedString("general_label_error", comment: ""),
+                                                message: NSLocalizedString("general_label_tryAgainLater", comment: ""),
+                                                preferredStyle: .alert)
+        let okAction = UIAlertAction(title: NSLocalizedString("general_button_ok", comment: ""), style: .default, handler: nil)
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
     }

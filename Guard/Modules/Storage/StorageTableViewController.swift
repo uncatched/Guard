@@ -16,10 +16,18 @@ final class StorageTableViewController: UITableViewController {
             emptyView.isHidden = !data.isEmpty
         }
     }
-    private var emptyLabel: UILabel!
+    
     @IBOutlet private weak var emptyView: UIView!
+    @IBOutlet private weak var emptyViewLabel: UILabel!
     
     // MARK: - Life Cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        title = NSLocalizedString("storage_title_passwords", comment: "")
+        emptyViewLabel.text = NSLocalizedString("storage_label_placeholder", comment: "")
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     

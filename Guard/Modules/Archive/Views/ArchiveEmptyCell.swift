@@ -8,4 +8,15 @@
 
 import UIKit
 
-final class ArchiveEmptyCell: UICollectionViewCell, CellReusable, NibLoadable {}
+final class ArchiveEmptyCell: UICollectionViewCell, CellReusable, NibLoadable {
+    
+    // MARK: - Outlets
+    @IBOutlet private weak var titleLabel: UILabel!
+    
+    // MARK: - Lifecycle
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        titleLabel.text = NSLocalizedString("zip_label_placeholder", comment: "")
+    }
+}

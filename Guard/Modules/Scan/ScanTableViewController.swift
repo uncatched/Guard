@@ -21,18 +21,31 @@ struct ScanResult {
 final class ScanTableViewController: UITableViewController {
     
     // MARK: - Outlets
-    @IBOutlet weak var totalCountLabel: UILabel!
-    @IBOutlet weak var duplicatesCountLabel: UILabel!
-    @IBOutlet weak var photoCountLabel: UILabel!
-    @IBOutlet weak var videoCountLabel: UILabel!
-    @IBOutlet weak var audioCountLabel: UILabel!
-    @IBOutlet weak var totalActivityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var duplicatesActivityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var photoActivityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var videoActivityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var audioActivityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var removeButton: UIButton!
-    @IBOutlet weak var removeMediaButton: UIButton!
+    @IBOutlet private weak var contactsTitleLabel: UILabel!
+    @IBOutlet private weak var libraryTitleLabel: UILabel!
+    
+    @IBOutlet private weak var totalTitleLabel: UILabel!
+    @IBOutlet private weak var totalCountLabel: UILabel!
+    
+    @IBOutlet private weak var duplicatesTitleLabel: UILabel!
+    @IBOutlet private weak var duplicatesCountLabel: UILabel!
+    
+    @IBOutlet private weak var photoTitleLabel: UILabel!
+    @IBOutlet private weak var photoCountLabel: UILabel!
+    
+    @IBOutlet private weak var videoTitleLabel: UILabel!
+    @IBOutlet private weak var videoCountLabel: UILabel!
+    
+    @IBOutlet private weak var audioTitleLabel: UILabel!
+    @IBOutlet private weak var audioCountLabel: UILabel!
+    
+    @IBOutlet private weak var totalActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet private weak var duplicatesActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet private weak var photoActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet private weak var videoActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet private weak var audioActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet private weak var removeButton: UIButton!
+    @IBOutlet private weak var removeMediaButton: UIButton!
     
     // MARK: - Properties
     private let store = CNContactStore()
@@ -43,6 +56,21 @@ final class ScanTableViewController: UITableViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        contactsTitleLabel.text = NSLocalizedString("scan_label_contacts", comment: "")
+        libraryTitleLabel.text = NSLocalizedString("scan_label_library", comment: "")
+        
+        title = NSLocalizedString("scan_label_title", comment: "")
+        totalTitleLabel.text = NSLocalizedString("scan_label_total", comment: "")
+        duplicatesTitleLabel.text = NSLocalizedString("scan_label_duplicates", comment: "")
+        removeButton.setTitle(NSLocalizedString("scan_label_removeDuplicates", comment: ""),
+                              for: .normal)
+        
+        photoTitleLabel.text = NSLocalizedString("scan_label_photo", comment: "")
+        videoTitleLabel.text = NSLocalizedString("scan_label_video", comment: "")
+        audioTitleLabel.text = NSLocalizedString("scan_label_audio", comment: "")
+        removeMediaButton.setTitle(NSLocalizedString("scan_label_removeMedia", comment: ""),
+                                   for: .normal)
         
         refresh()
     }
@@ -423,8 +451,10 @@ extension ScanTableViewController {
     }
     
     @IBAction private func onRemoveMediaButton() {
-        let alertController = UIAlertController(title: "Delete media older than...", message: nil, preferredStyle: .actionSheet)
-        alertController.addAction(UIAlertAction(title: "Six months", style: .default, handler: { [unowned self] _ in
+        let alertController = UIAlertController(title: NSLocalizedString("scan_label_deleteMedia", comment: ""),
+                                                message: nil,
+                                                preferredStyle: .actionSheet)
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("scan_label_sixMonth", comment: ""), style: .default, handler: { [unowned self] _ in
             guard let data = self.media else {
                 return
             }
@@ -432,7 +462,7 @@ extension ScanTableViewController {
             self.deleteMediaAfterSixMonths(data: data)
         }))
         
-        alertController.addAction(UIAlertAction(title: "One year", style: .default, handler: { [unowned self] _ in
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("scan_label_oneYear", comment: ""), style: .default, handler: { [unowned self] _ in
             guard let data = self.media else {
                 return
             }
@@ -440,7 +470,7 @@ extension ScanTableViewController {
             self.deleteMediaAfterOneYear(data: data)
         }))
         
-        alertController.addAction(UIAlertAction(title: "Two years", style: .default, handler: { [unowned self] _ in
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("scan_label_twoYears", comment: ""), style: .default, handler: { [unowned self] _ in
             guard let data = self.media else {
                 return
             }
@@ -448,7 +478,7 @@ extension ScanTableViewController {
             self.deleteMediaAfterTwoYears(data: data)
         }))
         
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("general_button_cancel", comment: ""), style: .cancel))
         
         present(alertController, animated: true, completion: nil)
     }
