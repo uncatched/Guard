@@ -7,13 +7,17 @@ on:
     branches: [ develop ]
 
 jobs:
-  build:
-
-    runs-on: macos-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Build
-      run: swift build -v
-    - name: Run tests
-      run: swift test -v
+  test:
+    name: Unit testing Guard
+    runs-on: macOS-latest
+    steps: 
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Select Xcode
+        run: sudo xcode-select -switch /Applications/Xcode_11.5.app
+      - name: Run tests
+        run: 
+          xcodebuild -workspace Guard.xcworkspace \
+          -scheme Guard \
+          -destination 'platform=iOS Simulator,name=iPhone 11' \
+          clean test
