@@ -70,10 +70,21 @@
 		92E91AF822F8922300E21338 /* ArchiveEmptyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92E91AF622F8922300E21338 /* ArchiveEmptyCell.xib */; };
 		92E91AFB22F895C000E21338 /* ZipDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E91AFA22F895C000E21338 /* ZipDetailsViewController.swift */; };
 		92F29BB122FABFCC00869F66 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F29BB022FABFCC00869F66 /* Storage.swift */; };
+		9A72EB132479053F0003234B /* GuardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A72EB122479053F0003234B /* GuardTests.swift */; };
 		9A9EE2A02466AE2A0036F875 /* UIDevice+Internet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9EE29F2466AE2A0036F875 /* UIDevice+Internet.swift */; };
 		9AA32682246D8034006CDACE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA32681246D8034006CDACE /* MainTabBarController.swift */; };
 		C2D1AE6DE74B2B7D728AA299 /* libPods-Guard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A3E0666F257CDA2065271FB /* libPods-Guard.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9A72EB152479053F0003234B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9218F16322C0E52F008DAC76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9218F16A22C0E52F008DAC76;
+			remoteInfo = Guard;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		6A3E0666F257CDA2065271FB /* libPods-Guard.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Guard.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +156,9 @@
 		92E91AF622F8922300E21338 /* ArchiveEmptyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArchiveEmptyCell.xib; sourceTree = "<group>"; };
 		92E91AFA22F895C000E21338 /* ZipDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipDetailsViewController.swift; sourceTree = "<group>"; };
 		92F29BB022FABFCC00869F66 /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		9A72EB102479053F0003234B /* GuardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A72EB122479053F0003234B /* GuardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardTests.swift; sourceTree = "<group>"; };
+		9A72EB142479053F0003234B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A9EE29F2466AE2A0036F875 /* UIDevice+Internet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Internet.swift"; sourceTree = "<group>"; };
 		9AA32681246D8034006CDACE /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		B1B32BF85149E5A80C39F0CE /* Pods-Guard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guard.release.xcconfig"; path = "Target Support Files/Pods-Guard/Pods-Guard.release.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +171,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2D1AE6DE74B2B7D728AA299 /* libPods-Guard.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A72EB0D2479053F0003234B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				9218F16D22C0E52F008DAC76 /* Guard */,
+				9A72EB112479053F0003234B /* GuardTests */,
 				9218F16C22C0E52F008DAC76 /* Products */,
 				22CFBB0E2331BC3418805F2B /* Pods */,
 				E252D902D18CFF58B8042649 /* Frameworks */,
@@ -206,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				9218F16B22C0E52F008DAC76 /* Guard.app */,
+				9A72EB102479053F0003234B /* GuardTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -487,6 +510,15 @@
 			path = Details;
 			sourceTree = "<group>";
 		};
+		9A72EB112479053F0003234B /* GuardTests */ = {
+			isa = PBXGroup;
+			children = (
+				9A72EB122479053F0003234B /* GuardTests.swift */,
+				9A72EB142479053F0003234B /* Info.plist */,
+			);
+			path = GuardTests;
+			sourceTree = "<group>";
+		};
 		E252D902D18CFF58B8042649 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -517,18 +549,40 @@
 			productReference = 9218F16B22C0E52F008DAC76 /* Guard.app */;
 			productType = "com.apple.product-type.application";
 		};
+		9A72EB0F2479053F0003234B /* GuardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A72EB172479053F0003234B /* Build configuration list for PBXNativeTarget "GuardTests" */;
+			buildPhases = (
+				9A72EB0C2479053F0003234B /* Sources */,
+				9A72EB0D2479053F0003234B /* Frameworks */,
+				9A72EB0E2479053F0003234B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A72EB162479053F0003234B /* PBXTargetDependency */,
+			);
+			name = GuardTests;
+			productName = GuardTests;
+			productReference = 9A72EB102479053F0003234B /* GuardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		9218F16322C0E52F008DAC76 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
+				LastSwiftUpdateCheck = 1150;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Litvinskii Denis";
 				TargetAttributes = {
 					9218F16A22C0E52F008DAC76 = {
 						CreatedOnToolsVersion = 10.2;
+					};
+					9A72EB0F2479053F0003234B = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 9218F16A22C0E52F008DAC76;
 					};
 				};
 			};
@@ -547,6 +601,7 @@
 			projectRoot = "";
 			targets = (
 				9218F16A22C0E52F008DAC76 /* Guard */,
+				9A72EB0F2479053F0003234B /* GuardTests */,
 			);
 		};
 /* End PBXProject section */
@@ -576,6 +631,13 @@
 				9218F17622C0E530008DAC76 /* Assets.xcassets in Resources */,
 				9218F17422C0E52F008DAC76 /* Main.storyboard in Resources */,
 				9218F19622C0E78D008DAC76 /* Settings.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A72EB0E2479053F0003234B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,7 +740,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9A72EB0C2479053F0003234B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A72EB132479053F0003234B /* GuardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9A72EB162479053F0003234B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9218F16A22C0E52F008DAC76 /* Guard */;
+			targetProxy = 9A72EB152479053F0003234B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		920E5AEA238E77A400B07513 /* Localizable.strings */ = {
@@ -874,6 +952,48 @@
 			};
 			name = Release;
 		};
+		9A72EB182479053F0003234B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2X583S7UQZ;
+				INFOPLIST_FILE = GuardTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = l.GuardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Guard.app/Guard";
+			};
+			name = Debug;
+		};
+		9A72EB192479053F0003234B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2X583S7UQZ;
+				INFOPLIST_FILE = GuardTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = l.GuardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Guard.app/Guard";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -891,6 +1011,15 @@
 			buildConfigurations = (
 				9218F17E22C0E530008DAC76 /* Debug */,
 				9218F17F22C0E530008DAC76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A72EB172479053F0003234B /* Build configuration list for PBXNativeTarget "GuardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A72EB182479053F0003234B /* Debug */,
+				9A72EB192479053F0003234B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
