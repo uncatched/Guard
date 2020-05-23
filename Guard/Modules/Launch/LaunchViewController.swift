@@ -14,6 +14,13 @@ final class LaunchViewController: UIViewController {
     private let passcode = PasscodeManager(with: NSLocalizedString("launch_label_authToProceed", comment: ""))
 
     // MARK: - Life Cycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.backgroundColor = .mainBlue
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         

@@ -25,7 +25,13 @@ final class AddPasswordTableViewController: UITableViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-         navigationItem.rightBarButtonItem = saveButton
+        
+        titleTextField.placeholder = NSLocalizedString("storage_label_titlePlaceholder", comment: "")
+        usernameTextField.placeholder = NSLocalizedString("storage_label_emailPlaceholder", comment: "")
+        passwordTextField.placeholder = NSLocalizedString("storage_label_passwordPlaceholder", comment: "")
+        websiteTextField.placeholder = NSLocalizedString("storage_label_websitePlaceholder", comment: "")
+        
+        navigationItem.rightBarButtonItem = saveButton
     }
     
     override func viewDidAppear(_ animated: Bool) {

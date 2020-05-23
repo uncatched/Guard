@@ -1,10 +1,11 @@
-/* 
-  Localizable.strings
-  Guard
-
-  Created by Denys on 27.11.2019.
-  Copyright © 2019 Litvinskii Denis. All rights reserved.
-*/
+/*
+ * Loco ios export: iOS Localizable.strings
+ * Project: Guard
+ * Release: Working copy
+ * Locale: en, English
+ * Exported by: Denys Litvinskyi
+ * Exported at: Wed, 13 May 2020 17:01:46 +0300
+ */
 
 /* loco:5dc8f204ed0cfa46e310dba3 */
 "premium_label_protectYourPhone" = "Protect your iPhone";
@@ -113,3 +114,135 @@
 
 /* loco:5dde5d84ed0cfa026b5d4cc2 */
 "imagePicker_placeholder_name" = "Name";
+
+/* loco:5eb67f1cc38e0f5a746dcfd2 */
+"systemInfo_label_generalInfo" = "GENERAL INFO";
+
+/* loco:5eb67f2ec38e0f5a54731e72 */
+"systemInfo_label_screen" = "SCREEN";
+
+/* loco:5eb67f43c38e0f5a7654df92 */
+"systemInfo_label_systemInfo" = "SYSTEM INFO";
+
+/* loco:5eb67f58c38e0f5a774a9d82 */
+"systemInfo_label_storage" = "STORAGE";
+
+/* loco:5eb67fa3c38e0f5a315d3543 */
+"general_label_yes" = "YES";
+
+/* loco:5eb67fb1c38e0f5a30068462 */
+"general_label_no" = "NO";
+
+/* loco:5eb67fc6c38e0f5a8a067822 */
+"systemInfo_label_networkInfo" = "NETWORK INFO";
+
+/* loco:5eb67fdec38e0f5a73111142 */
+"systemInfo_label_noConnection" = "No connection";
+
+/* loco:5eb680c2ed0cfa0cc357d7e2 */
+"systemInfo_label_title" = "Device info";
+
+/* loco:5eb6810aed0cfa0c8e4f79f2 */
+"systemInfo_label_copy" = "Tap on item to copy info";
+
+/* loco:5eb68574ed0cfa0db61ad5a2 */
+"systemInfo_label_identifier" = "Identifier";
+
+/* loco:5eb68598ed0cfa0db61ad5a4 */
+"systemInfo_label_description" = "Description";
+
+/* loco:5eb685a8ed0cfa0e29690643 */
+"systemInfo_label_diagonal" = "Diagonal";
+
+/* loco:5eb685bbed0cfa0e3d6e8553 */
+"systemInfo_label_ratio" = "Ratio";
+
+/* loco:5eb685d4ed0cfa0d8e1ba885 */
+"systemInfo_label_sensor" = "Biometric sensor";
+
+/* loco:5eb685ebed0cfa0dca7d74d5 */
+"systemInfo_label_version" = "System version";
+
+/* loco:5eb685ffed0cfa0d94316004 */
+"systemInfo_label_name" = "System name";
+
+/* loco:5eb68615ed0cfa0d781462c2 */
+"systemInfo_label_total" = "Total";
+
+/* loco:5eb68628ed0cfa0d8e1ba887 */
+"systemInfo_label_available" = "Available";
+
+/* loco:5eb6863ced0cfa0db61ad5a7 */
+"systemInfo_label_cellular" = "Cellular IP";
+
+/* loco:5eb687a0ed0cfa0e3d6e8558 */
+"scan_label_title" = "Scan";
+
+/* loco:5eb687b8ed0cfa0e2a099ae2 */
+"scan_label_contacts" = "CONTACTS";
+
+/* loco:5eb687d1ed0cfa0ea54dd852 */
+"scan_label_total" = "Total";
+
+/* loco:5eb687e2ed0cfa0e8f035732 */
+"scan_label_duplicates" = "Duplicates";
+
+/* loco:5eb687f2ed0cfa0ea4493fd3 */
+"scan_label_removeDuplicates" = "Remove duplicated contacts";
+
+/* loco:5eb687fced0cfa0e8d7b6a72 */
+"scan_label_library" = "LIBRARY";
+
+/* loco:5eb68804ed0cfa0ea31c7ab2 */
+"scan_label_photo" = "Photo";
+
+/* loco:5eb6880bed0cfa0ea31c7ab4 */
+"scan_label_video" = "Video";
+
+/* loco:5eb68813ed0cfa0e3d6e855b */
+"scan_label_audio" = "Audio";
+
+/* loco:5eb68824ed0cfa0e3d6e855d */
+"scan_label_removeMedia" = "Remove media older than...";
+
+/* loco:5ebbea7fed0cfa128974d523 */
+"storage_title_passwords" = "Passwords";
+
+/* loco:5ebbeab0ed0cfa1287674e55 */
+"storage_label_placeholder" = "You Don't Have Any Saved Passwords Yet. Tap \"+\" to Save Your Password";
+
+/* loco:5ebbeaf1ed0cfa1287674e58 */
+"storage_label_titlePlaceholder" = "Title";
+
+/* loco:5ebbeafeed0cfa12a2164332 */
+"storage_label_emailPlaceholder" = "Email/Username";
+
+/* loco:5ebbeb09ed0cfa127477f284 */
+"storage_label_passwordPlaceholder" = "Password";
+
+/* loco:5ebbeb12ed0cfa127369eda3 */
+"storage_label_websitePlaceholder" = "Website";
+
+/* loco:5ebbed45ed0cfa15e3619a32 */
+"zip_title_zip" = "Zip";
+
+/* loco:5ebbed68ed0cfa15c61750d2 */
+"zip_label_placeholder" = "You Don't Have Any Zip Archives Yet. Tap \"+\" to Create Your First Archive";
+
+/* loco:5ebbed88ed0cfa15e21006b2 */
+"zip_label_enterFileName" = "Enter a file name";
+
+/* loco:5ebbfd22ed0cfa1ae8517327 */
+"zip_label_created" = "Created";
+
+/* loco:5ebbfd2bed0cfa1ae9307309 */
+"zip_label_files" = "Files";
+
+/* loco:5ebbfd34ed0cfa1b320bc124 */
+"zip_label_size" = "Size";
+
+/* loco:5ebbfd40ed0cfa1b246e9809 */
+"zip_label_remove" = "Remove";
+
+/* loco:5ebbfd7ded0cfa1bef7f4282 */
+"zip_label_photos" = "Photos";

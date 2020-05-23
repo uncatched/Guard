@@ -50,7 +50,6 @@
 		9268AABD22EF6146005F7CF7 /* ArchiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9268AABB22EF6146005F7CF7 /* ArchiveCell.xib */; };
 		9268AABF22EF6459005F7CF7 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9268AABE22EF6459005F7CF7 /* NibLoadable.swift */; };
 		9270C07722C8B9F9004CD760 /* StorageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9270C07622C8B9F9004CD760 /* StorageData.swift */; };
-		9273027B22C333A000931541 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9273027A22C333A000931541 /* Device.swift */; };
 		927EB5DD22F0A61F009CDFB1 /* PhotosManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927EB5DC22F0A61F009CDFB1 /* PhotosManager.swift */; };
 		927FA21D22C9046800731B43 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927FA21C22C9046800731B43 /* StorageManager.swift */; };
 		92830DA3230D135E0042DEDF /* PremiumTermsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92830DA1230D135E0042DEDF /* PremiumTermsCell.swift */; };
@@ -71,6 +70,8 @@
 		92E91AF822F8922300E21338 /* ArchiveEmptyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92E91AF622F8922300E21338 /* ArchiveEmptyCell.xib */; };
 		92E91AFB22F895C000E21338 /* ZipDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E91AFA22F895C000E21338 /* ZipDetailsViewController.swift */; };
 		92F29BB122FABFCC00869F66 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F29BB022FABFCC00869F66 /* Storage.swift */; };
+		9A9EE2A02466AE2A0036F875 /* UIDevice+Internet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9EE29F2466AE2A0036F875 /* UIDevice+Internet.swift */; };
+		9AA32682246D8034006CDACE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA32681246D8034006CDACE /* MainTabBarController.swift */; };
 		C2D1AE6DE74B2B7D728AA299 /* libPods-Guard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A3E0666F257CDA2065271FB /* libPods-Guard.a */; };
 /* End PBXBuildFile section */
 
@@ -124,7 +125,6 @@
 		9268AABB22EF6146005F7CF7 /* ArchiveCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArchiveCell.xib; sourceTree = "<group>"; };
 		9268AABE22EF6459005F7CF7 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		9270C07622C8B9F9004CD760 /* StorageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageData.swift; sourceTree = "<group>"; };
-		9273027A22C333A000931541 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		927EB5DC22F0A61F009CDFB1 /* PhotosManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosManager.swift; sourceTree = "<group>"; };
 		927FA21C22C9046800731B43 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		92830DA1230D135E0042DEDF /* PremiumTermsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumTermsCell.swift; sourceTree = "<group>"; };
@@ -145,6 +145,8 @@
 		92E91AF622F8922300E21338 /* ArchiveEmptyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArchiveEmptyCell.xib; sourceTree = "<group>"; };
 		92E91AFA22F895C000E21338 /* ZipDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipDetailsViewController.swift; sourceTree = "<group>"; };
 		92F29BB022FABFCC00869F66 /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		9A9EE29F2466AE2A0036F875 /* UIDevice+Internet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Internet.swift"; sourceTree = "<group>"; };
+		9AA32681246D8034006CDACE /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		B1B32BF85149E5A80C39F0CE /* Pods-Guard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guard.release.xcconfig"; path = "Target Support Files/Pods-Guard/Pods-Guard.release.xcconfig"; sourceTree = "<group>"; };
 		D4BDC7207554ECCA9FDA23C1 /* Pods-Guard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guard.debug.xcconfig"; path = "Target Support Files/Pods-Guard/Pods-Guard.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -238,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				9218F17222C0E52F008DAC76 /* Main.storyboard */,
+				9AA32681246D8034006CDACE /* MainTabBarController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -424,7 +427,6 @@
 				92E6BF0B22E307BA00180FF7 /* Protocols */,
 				9270C07522C8B9E0004CD760 /* Models */,
 				92C573B322C26BD000A9B424 /* UIColor+Colors.swift */,
-				9273027A22C333A000931541 /* Device.swift */,
 				92B14FE522C79C2D0055FFF0 /* Double+Formats.swift */,
 			);
 			path = Common;
@@ -472,6 +474,7 @@
 			isa = PBXGroup;
 			children = (
 				92E6BF1B22E31D5100180FF7 /* UIViewController+Toast.swift */,
+				9A9EE29F2466AE2A0036F875 /* UIDevice+Internet.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -610,6 +613,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
 			);
 			outputFileListPaths = (
 			);
@@ -617,7 +621,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Fabric/run\"\n";
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -628,6 +632,7 @@
 			files = (
 				9268AAB722EF6065005F7CF7 /* CellReusable.swift in Sources */,
 				9213F1792301A9760002023F /* IAPHelper.swift in Sources */,
+				9AA32682246D8034006CDACE /* MainTabBarController.swift in Sources */,
 				9201DCB322F70769008C8672 /* ZipFile.swift in Sources */,
 				9213F1832301A9A10002023F /* SubscriptionDetailsCell.swift in Sources */,
 				92E6BF1422E30AC300180FF7 /* SetupAnalyticsCommand.swift in Sources */,
@@ -666,7 +671,7 @@
 				92DF600522F29F480001E3FE /* ImagePickerHeaderView.swift in Sources */,
 				9218F18F22C0E70C008DAC76 /* StorageTableViewController.swift in Sources */,
 				9270C07722C8B9F9004CD760 /* StorageData.swift in Sources */,
-				9273027B22C333A000931541 /* Device.swift in Sources */,
+				9A9EE2A02466AE2A0036F875 /* UIDevice+Internet.swift in Sources */,
 				9218F19822C0E7B1008DAC76 /* ScanTableViewController.swift in Sources */,
 				92E91AF722F8922300E21338 /* ArchiveEmptyCell.swift in Sources */,
 				9268AAB922EF609B005F7CF7 /* SizeConfigurable.swift in Sources */,
@@ -830,6 +835,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 2X583S7UQZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Guard/Resources/Info.plist";
@@ -838,6 +844,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.proxy.ltv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -851,6 +858,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2X583S7UQZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Guard/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
@@ -858,6 +866,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.proxy.ltv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

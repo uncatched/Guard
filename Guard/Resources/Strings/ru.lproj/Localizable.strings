@@ -1,10 +1,11 @@
-/* 
-  Localizable.strings
-  Guard
-
-  Created by Denys on 27.11.2019.
-  Copyright © 2019 Litvinskii Denis. All rights reserved.
-*/
+/*
+ * Loco ios export: iOS Localizable.strings
+ * Project: Guard
+ * Release: Working copy
+ * Locale: ru, Russian
+ * Exported by: Denys Litvinskyi
+ * Exported at: Wed, 13 May 2020 17:01:46 +0300
+ */
 
 /* loco:5dc8f204ed0cfa46e310dba3 */
 "premium_label_protectYourPhone" = "Защитите свой iPhone";
@@ -113,3 +114,135 @@
 
 /* loco:5dde5d84ed0cfa026b5d4cc2 */
 "imagePicker_placeholder_name" = "Имя";
+
+/* loco:5eb67f1cc38e0f5a746dcfd2 */
+"systemInfo_label_generalInfo" = "ОБЩЕЕ";
+
+/* loco:5eb67f2ec38e0f5a54731e72 */
+"systemInfo_label_screen" = "ЭКРАН";
+
+/* loco:5eb67f43c38e0f5a7654df92 */
+"systemInfo_label_systemInfo" = "СИСТЕМА";
+
+/* loco:5eb67f58c38e0f5a774a9d82 */
+"systemInfo_label_storage" = "ХРАНИЛИЩЕ";
+
+/* loco:5eb67fa3c38e0f5a315d3543 */
+"general_label_yes" = "ДА";
+
+/* loco:5eb67fb1c38e0f5a30068462 */
+"general_label_no" = "НЕТ";
+
+/* loco:5eb67fc6c38e0f5a8a067822 */
+"systemInfo_label_networkInfo" = "СЕТЬ";
+
+/* loco:5eb67fdec38e0f5a73111142 */
+"systemInfo_label_noConnection" = "Нет соединения";
+
+/* loco:5eb680c2ed0cfa0cc357d7e2 */
+"systemInfo_label_title" = "Устройство";
+
+/* loco:5eb6810aed0cfa0c8e4f79f2 */
+"systemInfo_label_copy" = "Нажмите чтобы скопировать";
+
+/* loco:5eb68574ed0cfa0db61ad5a2 */
+"systemInfo_label_identifier" = "Идентификатор";
+
+/* loco:5eb68598ed0cfa0db61ad5a4 */
+"systemInfo_label_description" = "Описание";
+
+/* loco:5eb685a8ed0cfa0e29690643 */
+"systemInfo_label_diagonal" = "Диагональ";
+
+/* loco:5eb685bbed0cfa0e3d6e8553 */
+"systemInfo_label_ratio" = "Соотношение";
+
+/* loco:5eb685d4ed0cfa0d8e1ba885 */
+"systemInfo_label_sensor" = "Биометрический датчик";
+
+/* loco:5eb685ebed0cfa0dca7d74d5 */
+"systemInfo_label_version" = "Версия системы";
+
+/* loco:5eb685ffed0cfa0d94316004 */
+"systemInfo_label_name" = "Имя системы";
+
+/* loco:5eb68615ed0cfa0d781462c2 */
+"systemInfo_label_total" = "Всего";
+
+/* loco:5eb68628ed0cfa0d8e1ba887 */
+"systemInfo_label_available" = "Доступно";
+
+/* loco:5eb6863ced0cfa0db61ad5a7 */
+"systemInfo_label_cellular" = "Сотовый IP";
+
+/* loco:5eb687a0ed0cfa0e3d6e8558 */
+"scan_label_title" = "Сканировать";
+
+/* loco:5eb687b8ed0cfa0e2a099ae2 */
+"scan_label_contacts" = "КОНТАКТЫ";
+
+/* loco:5eb687d1ed0cfa0ea54dd852 */
+"scan_label_total" = "Всего";
+
+/* loco:5eb687e2ed0cfa0e8f035732 */
+"scan_label_duplicates" = "Дубликаты";
+
+/* loco:5eb687f2ed0cfa0ea4493fd3 */
+"scan_label_removeDuplicates" = "Удалить дубликаты";
+
+/* loco:5eb687fced0cfa0e8d7b6a72 */
+"scan_label_library" = "БИБЛИОТЕКА";
+
+/* loco:5eb68804ed0cfa0ea31c7ab2 */
+"scan_label_photo" = "Фото";
+
+/* loco:5eb6880bed0cfa0ea31c7ab4 */
+"scan_label_video" = "Видео";
+
+/* loco:5eb68813ed0cfa0e3d6e855b */
+"scan_label_audio" = "Аудио";
+
+/* loco:5eb68824ed0cfa0e3d6e855d */
+"scan_label_removeMedia" = "Удалить медиа старше чем...";
+
+/* loco:5ebbea7fed0cfa128974d523 */
+"storage_title_passwords" = "Пароли";
+
+/* loco:5ebbeab0ed0cfa1287674e55 */
+"storage_label_placeholder" = "У Вас еще нет сохраненных паролей. Нажмите \"+\" чтобы сохранить Ваш пароль";
+
+/* loco:5ebbeaf1ed0cfa1287674e58 */
+"storage_label_titlePlaceholder" = "Название";
+
+/* loco:5ebbeafeed0cfa12a2164332 */
+"storage_label_emailPlaceholder" = "Email / Имя пользователя";
+
+/* loco:5ebbeb09ed0cfa127477f284 */
+"storage_label_passwordPlaceholder" = "Пароль";
+
+/* loco:5ebbeb12ed0cfa127369eda3 */
+"storage_label_websitePlaceholder" = "Веб-сайт";
+
+/* loco:5ebbed45ed0cfa15e3619a32 */
+"zip_title_zip" = "Архивы";
+
+/* loco:5ebbed68ed0cfa15c61750d2 */
+"zip_label_placeholder" = "У Вас еще нет архивов. Нажмите на \"+\" чтобы создать архив";
+
+/* loco:5ebbed88ed0cfa15e21006b2 */
+"zip_label_enterFileName" = "Введите имя";
+
+/* loco:5ebbfd22ed0cfa1ae8517327 */
+"zip_label_created" = "Создан";
+
+/* loco:5ebbfd2bed0cfa1ae9307309 */
+"zip_label_files" = "Файлов";
+
+/* loco:5ebbfd34ed0cfa1b320bc124 */
+"zip_label_size" = "Размер";
+
+/* loco:5ebbfd40ed0cfa1b246e9809 */
+"zip_label_remove" = "Удалить";
+
+/* loco:5ebbfd7ded0cfa1bef7f4282 */
+"zip_label_photos" = "Фото";
