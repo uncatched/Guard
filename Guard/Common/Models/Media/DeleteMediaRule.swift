@@ -18,26 +18,26 @@ enum DeleteMediaRule: Int, CaseIterable {
     var title: String {
         switch self {
         case .all:
-            return "All"
+            return NSLocalizedString("media_label_deleteAll", comment: "")
         case .sixMonths:
-            return "Remove older than 6 months"
+            return NSLocalizedString("media_label_removeSIxMonths", comment: "")
         case .oneYear:
-            return "Remove older than 1 year"
+            return NSLocalizedString("media_label_removeOneYear", comment: "")
         case .twoYears:
-            return "Remove older than 2 years"
+            return NSLocalizedString("media_label_removeTwoYears", comment: "")
         }
     }
     
     var shortTitle: String {
         switch self {
         case .all:
-            return "All"
+            return NSLocalizedString("media_label_deleteAllShort", comment: "")
         case .sixMonths:
-            return "6 months"
+            return NSLocalizedString("media_label_removeSIxMonthsShort", comment: "")
         case .oneYear:
-            return "1 year"
+            return NSLocalizedString("media_label_removeOneYearShort", comment: "")
         case .twoYears:
-            return "2 years"
+            return NSLocalizedString("media_label_removeTwoYearsShort", comment: "")
         }
     }
 }

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ArchiveCell" customModule="Guard" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="247" height="148"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="247" height="148"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="folder" translatesAutoresizingMaskIntoConstraints="NO" id="Fqp-ka-SVa">
+                        <rect key="frame" x="0.0" y="0.0" width="247" height="108"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019-04-09" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYp-Jm-3xh">
+                        <rect key="frame" x="20" y="108" width="207" height="40"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Fqp-ka-SVa" secondAttribute="bottom" constant="40" id="9WR-Zu-oFk"/>
+                <constraint firstItem="rYp-Jm-3xh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="JhL-vI-jsc"/>
+                <constraint firstAttribute="trailing" secondItem="rYp-Jm-3xh" secondAttribute="trailing" constant="20" id="LX3-tM-CjA"/>
+                <constraint firstAttribute="trailing" secondItem="Fqp-ka-SVa" secondAttribute="trailing" id="QM6-w2-apz"/>
+                <constraint firstItem="Fqp-ka-SVa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="TOy-P2-g7J"/>
+                <constraint firstItem="Fqp-ka-SVa" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="gJO-3z-UmP"/>
+                <constraint firstAttribute="bottom" secondItem="rYp-Jm-3xh" secondAttribute="bottom" id="icf-vI-p5w"/>
+                <constraint firstItem="rYp-Jm-3xh" firstAttribute="top" secondItem="Fqp-ka-SVa" secondAttribute="bottom" id="pv4-0R-XjQ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="247" height="148"/>
+            <connections>
+                <outlet property="imageView" destination="Fqp-ka-SVa" id="iDr-Pb-r4d"/>
+                <outlet property="titleLabel" destination="rYp-Jm-3xh" id="lJw-fM-wg3"/>
+            </connections>
+            <point key="canvasLocation" x="280.43478260869568" y="154.6875"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="folder" width="48" height="48"/>
+    </resources>
+</document>

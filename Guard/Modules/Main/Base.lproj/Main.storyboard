@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FK9-Wd-syI">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FK9-Wd-syI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="Q1W-5B-XNX">
             <objects>
-                <tabBarController id="FK9-Wd-syI" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" id="FK9-Wd-syI" customClass="MainTabBarController" customModule="Guard" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="JOT-cY-dV5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -23,7 +21,7 @@
                         <segue destination="k2s-X0-3yr" kind="relationship" relationship="viewControllers" id="foG-4T-k3f"/>
                         <segue destination="jpN-nm-83L" kind="relationship" relationship="viewControllers" id="Whj-gO-snz"/>
                         <segue destination="rRU-Tn-Ua5" kind="relationship" relationship="viewControllers" id="22d-5F-j5n"/>
-                        <segue destination="7xk-sF-3aD" kind="relationship" relationship="viewControllers" id="MOf-JL-eDo"/>
+                        <segue destination="qx9-IF-uYJ" kind="relationship" relationship="viewControllers" id="Ap2-HP-JSE"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12S-4r-VPe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -60,15 +58,18 @@
             </objects>
             <point key="canvasLocation" x="828" y="-522"/>
         </scene>
-        <!--Settings-->
-        <scene sceneID="ABA-il-iJN">
+        <!--Archive-->
+        <scene sceneID="0XO-Ke-TLq">
             <objects>
-                <viewControllerPlaceholder storyboardName="Settings" id="7xk-sF-3aD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" id="Hx4-Z3-Kc9"/>
+                <viewControllerPlaceholder storyboardName="Archive" id="qx9-IF-uYJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Zip" image="archive" id="7Wa-Y3-jWX"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lGy-Vl-RUD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rdm-2O-bUx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="828" y="-402"/>
+            <point key="canvasLocation" x="830" y="-415"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="archive" width="24" height="24"/>
+    </resources>
 </document>

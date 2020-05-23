@@ -13,11 +13,37 @@ final class DefaultsManager {
     // MARK: - Keys
     enum Keys: String {
         case deleteMediaRuleKey
-        case removeDuplicates
+        case isPremium
+        case isPremiumShown
+        case isSecondLaunch
     }
     
     // MARK: - Properties
     static let shared = DefaultsManager()
+    
+    static var isPremium: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: Keys.isPremium.rawValue)
+        } set {
+            UserDefaults.standard.set(newValue, forKey: Keys.isPremium.rawValue)
+        }
+    }
+    
+    static var isPremiumShown: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: Keys.isPremiumShown.rawValue)
+        } set {
+            UserDefaults.standard.set(newValue, forKey: Keys.isPremiumShown.rawValue)
+        }
+    }
+    
+    static var isSecondLaunch: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: Keys.isSecondLaunch.rawValue)
+        } set {
+            UserDefaults.standard.set(newValue, forKey: Keys.isSecondLaunch.rawValue)
+        }
+    }
     
     var deleteMediaRule: DeleteMediaRule {
         get {
@@ -27,16 +53,6 @@ final class DefaultsManager {
         
         set {
             UserDefaults.standard.set(newValue.rawValue, forKey: Keys.deleteMediaRuleKey.rawValue)
-        }
-    }
-    
-    var removeDuplicates: Bool {
-        get {
-            return UserDefaults.standard.bool(forKey: Keys.removeDuplicates.rawValue)
-        }
-        
-        set {
-            UserDefaults.standard.set(newValue, forKey: Keys.removeDuplicates.rawValue)
         }
     }
 }

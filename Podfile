@@ -3,8 +3,9 @@
 
 target 'Guard' do
   
-	pod 'Firebase/Analytics'
-  pod 'Fabric', '~> 1.10.2'
-  pod 'Crashlytics', '~> 3.13.4'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Crashlytics'
+  pod 'Zip', '~> 1.1'
+  pod 'DeviceKit', '~> 2.0'
   
 end

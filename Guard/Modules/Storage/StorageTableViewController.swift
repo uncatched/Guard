@@ -11,9 +11,23 @@ import UIKit
 final class StorageTableViewController: UITableViewController {
     
     // MARK: - Properties
-    private var data: [StorageData]!
+    private var data: [StorageData]! {
+        didSet {
+            emptyView.isHidden = !data.isEmpty
+        }
+    }
+    
+    @IBOutlet private weak var emptyView: UIView!
+    @IBOutlet private weak var emptyViewLabel: UILabel!
     
     // MARK: - Life Cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        title = NSLocalizedString("storage_title_passwords", comment: "")
+        emptyViewLabel.text = NSLocalizedString("storage_label_placeholder", comment: "")
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     
@@ -21,14 +35,49 @@ final class StorageTableViewController: UITableViewController {
         
         tableView.reloadData()
     }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+
+        let navigationBarHeight: CGFloat = navigationController?.navigationBar.bounds.height ?? 0.0
+        let tabBarHeight: CGFloat = tabBarController?.tabBar.bounds.height ?? 0.0
+        let height = tableView.bounds.size.height - (navigationBarHeight + tabBarHeight)
+        emptyView.frame = CGRect(origin: .zero, size: CGSize(width: tableView.bounds.size.width, height: height))
+    }
+}
+
+// MARK: - Actions
+extension StorageTableViewController {
+    
+    @IBAction private func onAddButton() {
+        guard DefaultsManager.isPremium || data.count < 3 else {
+            showPremiumAlert()
+            return
+        }
+        
+        guard let viewController = storyboard?.instantiateViewController(withIdentifier: "AddPasswordTableViewController") else {
+            return
+        }
+        
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+// MARK: - Private methods
+extension StorageTableViewController {
+    
+    private func showPremiumAlert() {
+        let premiumStoryboard = UIStoryboard(name: "Premium", bundle: nil)
+        guard let premiumNavigationController = premiumStoryboard.instantiateInitialViewController() else {
+            return
+        }
+        
+        present(premiumNavigationController, animated: true, completion: nil)
+    }
 }
 
 // MARK: - UITableViewDelegate/DataSource
 extension StorageTableViewController {
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
@@ -46,6 +95,10 @@ extension StorageTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        guard data.count > 0 else {
+            return .none
+        }
+        
         return .delete
     }
     
