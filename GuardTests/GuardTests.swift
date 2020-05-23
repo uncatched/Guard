@@ -17,4 +17,8 @@ final class GuardTests: XCTestCase {
     func testFailed() {
         XCTFail("Failed...")
     }
+    
+    func testAgainFailed() {
+        XCTAssert(1 == 2)
+    }
 }
