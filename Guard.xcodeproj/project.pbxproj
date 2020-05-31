@@ -70,6 +70,7 @@
 		92E91AF822F8922300E21338 /* ArchiveEmptyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92E91AF622F8922300E21338 /* ArchiveEmptyCell.xib */; };
 		92E91AFB22F895C000E21338 /* ZipDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E91AFA22F895C000E21338 /* ZipDetailsViewController.swift */; };
 		92F29BB122FABFCC00869F66 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F29BB022FABFCC00869F66 /* Storage.swift */; };
+		9A4359CD2484201D0064E757 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A4359CF2484201D0064E757 /* InfoPlist.strings */; };
 		9A72EB132479053F0003234B /* GuardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A72EB122479053F0003234B /* GuardTests.swift */; };
 		9A9EE2A02466AE2A0036F875 /* UIDevice+Internet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9EE29F2466AE2A0036F875 /* UIDevice+Internet.swift */; };
 		9AA32682246D8034006CDACE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA32681246D8034006CDACE /* MainTabBarController.swift */; };
@@ -156,6 +157,8 @@
 		92E91AF622F8922300E21338 /* ArchiveEmptyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArchiveEmptyCell.xib; sourceTree = "<group>"; };
 		92E91AFA22F895C000E21338 /* ZipDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipDetailsViewController.swift; sourceTree = "<group>"; };
 		92F29BB022FABFCC00869F66 /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		9A4359CE2484201D0064E757 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9A4359D02484201E0064E757 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9A72EB102479053F0003234B /* GuardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A72EB122479053F0003234B /* GuardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardTests.swift; sourceTree = "<group>"; };
 		9A72EB142479053F0003234B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -276,6 +279,7 @@
 				9218F17722C0E530008DAC76 /* LaunchScreen.storyboard */,
 				9218F17A22C0E530008DAC76 /* Info.plist */,
 				92E6BF1522E30BBC00180FF7 /* GoogleService-Info.plist */,
+				9A4359CF2484201D0064E757 /* InfoPlist.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -612,6 +616,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9268AABD22EF6146005F7CF7 /* ArchiveCell.xib in Resources */,
+				9A4359CD2484201D0064E757 /* InfoPlist.strings in Resources */,
 				9213F1822301A9A10002023F /* SubscriptionDetailsCell.xib in Resources */,
 				9219BB1922F0BCA300C91B79 /* ImagePickerEmptyCell.xib in Resources */,
 				9213F1812301A9A10002023F /* PremiumBuyCell.xib in Resources */,
@@ -784,6 +789,15 @@
 				920E5AEC238E77C000B07513 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9A4359CF2484201D0064E757 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A4359CE2484201D0064E757 /* en */,
+				9A4359D02484201E0064E757 /* ru */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

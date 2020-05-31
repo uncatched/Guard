@@ -1,0 +1,3 @@
+NSContactsUsageDescription = "This allows Guard to process your total contacts and find the duplicates to optimize your storage.";
+NSFaceIDUsageDescription = "This allows you to securely sign into Guard";
+NSPhotoLibraryUsageDescription = "This allows Guard to process your photos to calculate the total amount.";
