@@ -4,7 +4,7 @@
  * Release: Working copy
  * Locale: en, English
  * Exported by: Denys Litvinskyi
- * Exported at: Wed, 13 May 2020 17:01:46 +0300
+ * Exported at: Tue, 02 Jun 2020 19:18:14 +0300
  */
 
 /* loco:5dc8f204ed0cfa46e310dba3 */
@@ -14,7 +14,7 @@
 "premium_label_startFreeTrial" = "Start your 7-day free trial";
 
 /* loco:5dc8f22ded0cfa46ec4bb842 */
-"premium_label_thenPerMonth" = "Then $9.99 per month";
+"premium_label_thenPerMonth" = "$9.99 per month";
 
 /* loco:5dc8f240ed0cfa46ba799ce9 */
 "premium_button_tryFree" = "Try free for 7 days";
